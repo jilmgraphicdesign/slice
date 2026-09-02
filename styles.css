@@ -775,3 +775,10 @@ h1 {
   }
   .dossier-node { display: none; }
 }
+
+.reply-sender strong {
+  font-size: 1.1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #39ff88;
+}

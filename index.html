@@ -6,6 +6,86 @@
   <meta name="theme-color" content="#09020f" />
   <title>SL1C3 Transmission Archive</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .reply-thread {
+      position: relative;
+      width: min(82%, 920px);
+      margin: 1.5rem 0 2rem auto;
+      padding-left: 2rem;
+    }
+
+    .reply-thread::before {
+      content: "↳ RETURN TRANSMISSION";
+      display: block;
+      margin: 0 0 .55rem -1.7rem;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+
+    .reply-card {
+      position: relative;
+      padding: 1.25rem 1.4rem;
+      border-left: 4px solid currentColor;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.14);
+    }
+
+    .reply-card::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 1.55rem;
+      width: 2rem;
+      border-top: 1px solid currentColor;
+      opacity: .65;
+    }
+
+    .reply-sender {
+      display: flex;
+      align-items: baseline;
+      gap: .65rem;
+      flex-wrap: wrap;
+      margin-bottom: .8rem;
+    }
+
+    .reply-sender strong {
+      font-size: 1.1rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .reply-sender span {
+      font-size: .72rem;
+      letter-spacing: .12em;
+      opacity: .72;
+    }
+
+    .reply-message {
+      margin: .6rem 0;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255,255,255,.18);
+    }
+
+    .reply-end {
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    @media (max-width: 700px) {
+      .reply-thread {
+        width: calc(100% - 1rem);
+        margin-left: 1rem;
+        padding-left: 1rem;
+      }
+
+      .reply-card::before {
+        left: -1rem;
+        width: 1rem;
+      }
+    }
+  </style>
 </head>
 <body class="archive-page">
   <div class="signal-noise" aria-hidden="true"></div>
@@ -142,16 +222,6 @@
             </figure>
           </section>
 
-          <section class="message-card hud-frame">
-            <div class="section-code">06 // RETURN TRANSMISSION // KESH</div>
-            <h2>Kohr Atlas Communication</h2>
-            <p><strong>REACTION:</strong> 👍 // 👎</p>
-            <p><strong>MESSAGE:</strong> Where did you get that classified information picture??</p>
-            <p><strong>MESSAGE:</strong> that is highly inaccurate... there is way more ivory usually</p>
-            <p><strong>MESSAGE:</strong> the baby is cute though</p>
-            <p class="archive-note">END TRANSMISSION</p>
-          </section>
-
           <section class="chess-command hud-frame">
             <span class="prompt">TACTICAL INSERT:</span>
             <strong>SAVRIP B4 TO A4</strong>
@@ -165,6 +235,24 @@
               <span>https://www.youtube.com/@tobedicedadv</span>
             </div>
           </footer>
+
+          <section class="reply-thread" aria-label="Reply from Kesh">
+            <article class="reply-card hud-frame">
+              <div class="section-code">INCOMING // REPLY // KESH</div>
+
+              <div class="reply-sender">
+                <strong>KESH</strong>
+                <span>KOHR ATLAS COMMUNICATION</span>
+              </div>
+
+              <p><strong>REACTION:</strong> 👍 // 👎</p>
+              <p class="reply-message"><strong>MESSAGE:</strong> Where did you get that classified information picture??</p>
+              <p class="reply-message"><strong>MESSAGE:</strong> that is highly inaccurate... there is way more ivory usually</p>
+              <p class="reply-message"><strong>MESSAGE:</strong> the baby is cute though</p>
+
+              <p class="archive-note reply-end">END TRANSMISSION</p>
+            </article>
+          </section>
         </div>
       </details>
 
