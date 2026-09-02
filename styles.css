@@ -782,3 +782,547 @@ h1 {
   text-transform: uppercase;
   color: #39ff88;
 }
+
+
+/* =========================================================
+   TRANSMISSION REPLIES + WAYGUARD PROTOCOL UI
+   Moved from index.html
+   ========================================================= */
+
+.reply-thread {
+      position: relative;
+      width: min(82%, 920px);
+      margin: 1.5rem 0 2rem auto;
+      padding-left: 2rem;
+    }
+
+    .reply-thread::before {
+      content: "↳ RETURN TRANSMISSION";
+      display: block;
+      margin: 0 0 .55rem -1.7rem;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+
+    .reply-card {
+      position: relative;
+      padding: 1.25rem 1.4rem;
+      border-left: 4px solid currentColor;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.14);
+    }
+
+    .reply-card::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 1.55rem;
+      width: 2rem;
+      border-top: 1px solid currentColor;
+      opacity: .65;
+    }
+
+    .reply-sender {
+      display: flex;
+      align-items: baseline;
+      gap: .65rem;
+      flex-wrap: wrap;
+      margin-bottom: .8rem;
+    }
+
+    .reply-sender strong {
+      font-size: 1.1rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .reply-sender span {
+      font-size: .72rem;
+      letter-spacing: .12em;
+      opacity: .72;
+    }
+
+    .reply-message {
+      margin: .6rem 0;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(255,255,255,.18);
+    }
+
+    .reply-end {
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    @media (max-width: 700px) {
+      .reply-thread {
+        width: calc(100% - 1rem);
+        margin-left: 1rem;
+        padding-left: 1rem;
+      }
+
+      .reply-card::before {
+        left: -1rem;
+        width: 1rem;
+      }
+    }
+  
+    /* WAYGUARD PROTOCOL // FLOATING AD */
+    .hawkbat-rail {
+      position: fixed;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 190px;
+      max-height: calc(100vh - 24px);
+      z-index: 80;
+    }
+
+    .hawkbat-ad {
+      position: relative;
+      width: 100%;
+      max-height: calc(100vh - 24px);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      overflow: hidden;
+      padding: 0;
+      border: 1px solid rgba(255,255,255,.28);
+      background:
+        linear-gradient(180deg, rgba(10,10,16,.97), rgba(4,4,8,.94));
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.06) inset,
+        0 0 28px rgba(255,255,255,.08);
+      text-align: left;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+      overflow: hidden;
+    }
+    .hawkbat-image-slot {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      min-height: 90px;
+      height: clamp(110px, 23vh, 250px);
+      border-bottom: 1px solid rgba(54,216,255,.35);
+      background:
+        radial-gradient(circle at 50% 45%, rgba(54,216,255,.14), transparent 54%),
+        linear-gradient(180deg, rgba(5,8,18,.98), rgba(3,2,10,.96));
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 12px 8px;
+      flex: 1 1 auto;
+    }
+
+    .hawkbat-image-slot-bottom {
+      border-top: 1px solid rgba(140,77,255,.34);
+      border-bottom: 0;
+    }
+
+    .hawkbat-logo {
+      position: relative;
+      z-index: 2;
+
+      /* Preserve the logo's natural aspect ratio and keep ALL of it visible */
+      width: auto;
+      height: auto;
+      max-width: 92%;
+      max-height: 92%;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+
+      filter:
+        brightness(0) saturate(100%)
+        invert(77%) sepia(63%) saturate(2900%) hue-rotate(157deg) brightness(106%) contrast(104%)
+        drop-shadow(2px 0 0 rgba(255,43,194,.75))
+        drop-shadow(-2px 0 0 rgba(140,77,255,.72))
+        drop-shadow(0 0 8px rgba(54,216,255,.85));
+
+      animation: none;
+      transform: none;
+    }
+
+    /* CSS-only RGB split / glitch copies of wp_logo.png */
+    .hawkbat-image-slot::before,
+    .hawkbat-image-slot::after {
+      content: "";
+      position: absolute;
+      inset: 6%;
+      z-index: 3;
+      pointer-events: none;
+      background: url("assets/wp_logo.png") center / contain no-repeat;
+      mix-blend-mode: screen;
+      opacity: .34;
+    }
+
+    .hawkbat-image-slot::before {
+      filter: brightness(0) saturate(100%) invert(35%) sepia(98%) saturate(4050%) hue-rotate(286deg) brightness(117%) contrast(118%);
+      animation: none;
+    }
+
+    .hawkbat-image-slot::after {
+      filter: brightness(0) saturate(100%) invert(82%) sepia(93%) saturate(1644%) hue-rotate(119deg) brightness(103%) contrast(107%);
+      animation: none;
+    }
+.hawkbat-ad::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(
+          180deg,
+          rgba(255,255,255,.035) 0,
+          rgba(255,255,255,.035) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+      opacity: .5;
+    }
+
+    .hawkbat-ad:hover,
+    .hawkbat-ad:focus-visible {
+      transform: translateX(-4px);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.12) inset,
+        0 0 35px rgba(255,255,255,.16);
+      outline: none;
+    }
+
+    .hawkbat-ad-top {
+      display: block;
+      padding: .45rem .6rem;
+      font-size: .62rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      opacity: .78;
+    }
+
+    .hawkbat-ad-body {
+      display: block;
+      padding: .85rem .8rem .75rem;
+    }
+
+    .hawkbat-ad-name {
+      display: block;
+      font-size: 1.15rem;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: .55rem;
+    }
+
+    .hawkbat-ad-tagline {
+      display: block;
+      font-size: .72rem;
+      line-height: 1.45;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+
+    .hawkbat-ad-cta {
+      display: block;
+      margin-top: .8rem;
+      padding-top: .65rem;
+      border-top: 1px solid rgba(255,255,255,.16);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+
+    .hawkbat-discount {
+      position: relative;
+      display: block;
+      margin-top: .8rem;
+      padding: .62rem .58rem .56rem;
+      overflow: hidden;
+      border: 1px solid rgba(54,216,255,.72);
+      background:
+        linear-gradient(135deg, rgba(54,216,255,.12), rgba(140,77,255,.13) 55%, rgba(255,43,194,.08));
+      box-shadow:
+        inset 0 0 16px rgba(54,216,255,.06),
+        0 0 12px rgba(54,216,255,.12);
+      color: #dffaff;
+    }
+
+    .hawkbat-discount::after {
+      content: "";
+      position: absolute;
+      left: -25%;
+      top: 0;
+      width: 34%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+      transform: skewX(-18deg);
+      animation: hawkbatDiscountSweep 5.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .hawkbat-discount-label,
+    .hawkbat-discount strong,
+    .hawkbat-discount small {
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+
+    .hawkbat-discount-label {
+      margin-bottom: .25rem;
+      color: var(--cyan);
+      font-size: .52rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .hawkbat-discount strong {
+      color: #fff;
+      font-size: .74rem;
+      line-height: 1.2;
+      letter-spacing: .08em;
+      text-shadow: 1px 0 var(--pink), -1px 0 var(--cyan), 0 0 9px rgba(54,216,255,.45);
+    }
+
+    .hawkbat-discount small {
+      margin-top: .28rem;
+      color: #b9dce7;
+      font-size: .48rem;
+      line-height: 1.35;
+      letter-spacing: .025em;
+    }
+
+    .hawkbat-ad-status {
+      display: inline-block;
+      margin-top: .6rem;
+      font-size: .58rem;
+      letter-spacing: .12em;
+      opacity: .62;
+    }
+
+
+    @keyframes hawkbatLogoFlicker {
+      0%, 7%, 9%, 52%, 54%, 87%, 100% { opacity: 1; }
+      8% { opacity: .58; filter: brightness(.85) saturate(1.35); }
+      53% { opacity: .78; filter: brightness(1.35) saturate(1.7); }
+      88% { opacity: .9; }
+    }
+
+    @keyframes hawkbatGlitchSliceA {
+      0%, 77%, 82%, 100% { opacity: 0; transform: translateX(0); clip-path: inset(0); }
+      78% { opacity: .76; transform: translateX(7px); clip-path: inset(18% 0 64% 0); }
+      79% { opacity: .58; transform: translateX(-5px); clip-path: inset(49% 0 35% 0); }
+      80% { opacity: .72; transform: translateX(10px); clip-path: inset(72% 0 12% 0); }
+      81% { opacity: 0; }
+    }
+
+    @keyframes hawkbatGlitchSliceB {
+      0%, 61%, 66%, 100% { opacity: 0; transform: translateX(0); clip-path: inset(0); }
+      62% { opacity: .6; transform: translateX(-8px); clip-path: inset(26% 0 58% 0); }
+      63% { opacity: .5; transform: translateX(5px); clip-path: inset(58% 0 26% 0); }
+      64% { opacity: .68; transform: translateX(-11px); clip-path: inset(79% 0 7% 0); }
+      65% { opacity: 0; }
+    }
+
+    @keyframes hawkbatDiscountSweep {
+      0%, 68% { left: -40%; opacity: 0; }
+      72% { opacity: .8; }
+      88% { left: 120%; opacity: .45; }
+      100% { left: 120%; opacity: 0; }
+    }
+
+    /* WAYGUARD PROTOCOL // POPUP */
+    .hawkbat-modal[hidden] {
+      display: none;
+    }
+
+    .hawkbat-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: blur(5px);
+    }
+
+    .hawkbat-modal-card {
+      position: relative;
+      width: min(92vw, 560px);
+      padding: 1.35rem 1.45rem 1.25rem;
+      background: rgba(7,7,12,.98);
+      border: 1px solid rgba(255,255,255,.3);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.06) inset,
+        0 0 45px rgba(0,0,0,.75);
+    }
+
+    .hawkbat-modal-card::before {
+      content: "INCOMING // RECOVERY CHANNEL";
+      display: block;
+      margin-bottom: .85rem;
+      padding-bottom: .55rem;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      font-size: .65rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+
+    .hawkbat-modal-card h2 {
+      margin: 0 0 .35rem;
+      font-size: 1.35rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hawkbat-modal-sub {
+      margin: 0 0 1rem;
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+
+    .hawkbat-message {
+      margin: 0;
+      padding: 1rem 1rem 1rem 1.15rem;
+      border-left: 3px solid currentColor;
+      background: rgba(255,255,255,.035);
+      line-height: 1.65;
+    }
+
+    .hawkbat-signoff {
+      margin-top: .85rem;
+      text-align: right;
+      font-size: .72rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .hawkbat-close {
+      position: absolute;
+      top: .7rem;
+      right: .7rem;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid rgba(255,255,255,.2);
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .hawkbat-close:hover,
+    .hawkbat-close:focus-visible {
+      background: rgba(255,255,255,.08);
+      outline: none;
+    }
+
+    @media (max-width: 1100px) {
+      .hawkbat-rail {
+        top: auto;
+        right: 12px;
+        bottom: 12px;
+        transform: none;
+        width: min(250px, calc(100vw - 24px));
+        max-height: 72vh;
+      }
+
+      .hawkbat-ad {
+        max-height: 72vh;
+      }
+
+      .hawkbat-image-slot {
+        height: clamp(80px, 17vh, 150px);
+        min-height: 70px;
+      }
+
+      .hawkbat-ad:hover,
+      .hawkbat-ad:focus-visible {
+        transform: translateY(-4px);
+      }
+    }
+
+
+
+/* =========================================================
+   HAWKBAT LOGO — FINAL NO-CROP FIX
+   The image itself is forced to fit the slot by BOTH width
+   and height, so the bottom of the vertical logo cannot crop.
+   ========================================================= */
+
+.hawkbat-image-slot {
+  /* Do not let the flex column squash the logo panel. */
+  flex: 0 0 clamp(220px, 23vh, 250px) !important;
+  height: clamp(220px, 23vh, 250px) !important;
+  min-height: 220px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 10px !important;
+  overflow: hidden !important;
+}
+
+/* This is the important part:
+   fill the available BOX, then let object-fit contain
+   scale the entire source image into it. */
+.hawkbat-logo {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+  animation: none !important;
+
+  filter:
+    brightness(0) saturate(100%)
+    invert(77%) sepia(63%) saturate(2900%) hue-rotate(157deg)
+    brightness(106%) contrast(104%)
+    drop-shadow(3px 0 0 rgba(255,43,194,.82))
+    drop-shadow(-2px 0 0 rgba(140,77,255,.70))
+    drop-shadow(0 0 8px rgba(54,216,255,.88)) !important;
+}
+
+/* Disable the duplicate background-image copies.
+   They were separate layers with their own sizing/clipping,
+   which could make the logo LOOK cropped even when the IMG fit. */
+.hawkbat-image-slot::before,
+.hawkbat-image-slot::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* Keep the ad usable if its total content is taller than the screen.
+   The logo panels themselves will no longer be compressed. */
+.hawkbat-ad {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* The old responsive rule reduced logo panels to 150px.
+   Override it so the same no-crop sizing is kept on narrower screens. */
+@media (max-width: 1100px) {
+  .hawkbat-image-slot {
+    flex-basis: 220px !important;
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+}
