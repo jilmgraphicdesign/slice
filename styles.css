@@ -1326,3 +1326,125 @@ h1 {
     min-height: 220px !important;
   }
 }
+
+/* =========================================================
+   HAWK BAT AD — DISMISS BUTTON + MOBILE COMPACT MODE
+   ========================================================= */
+
+.hawkbat-rail[hidden] {
+  display: none !important;
+}
+
+.hawkbat-rail-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 6;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(54,216,255,.72);
+  background: rgba(5,8,18,.98);
+  color: #dffaff;
+  box-shadow: 0 0 12px rgba(54,216,255,.24);
+  font: 800 1rem/1 "Courier New", monospace;
+  cursor: pointer;
+}
+
+.hawkbat-rail-close:hover,
+.hawkbat-rail-close:focus-visible {
+  color: #fff;
+  border-color: var(--pink-hot);
+  box-shadow: 0 0 14px rgba(255,43,194,.32);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .hawkbat-rail {
+    right: 8px;
+    bottom: 8px;
+    width: min(164px, calc(100vw - 16px));
+    max-height: 48vh;
+  }
+
+  .hawkbat-ad {
+    max-height: 48vh;
+  }
+
+  .hawkbat-image-slot,
+  .hawkbat-image-slot-top {
+    flex: 0 0 86px !important;
+    height: 86px !important;
+    min-height: 86px !important;
+    padding: 6px !important;
+  }
+
+  .hawkbat-image-slot-bottom {
+    display: none !important;
+  }
+
+  .hawkbat-ad-top {
+    padding: .32rem .45rem;
+    font-size: .48rem;
+    letter-spacing: .1em;
+  }
+
+  .hawkbat-ad-body {
+    padding: .5rem .52rem .46rem;
+  }
+
+  .hawkbat-ad-name {
+    margin-bottom: .32rem;
+    font-size: .86rem;
+  }
+
+  .hawkbat-ad-tagline {
+    font-size: .54rem;
+    line-height: 1.28;
+    letter-spacing: .035em;
+  }
+
+  .hawkbat-ad-cta {
+    margin-top: .45rem;
+    padding-top: .4rem;
+    font-size: .52rem;
+    letter-spacing: .08em;
+  }
+
+  .hawkbat-discount {
+    margin-top: .45rem;
+    padding: .42rem .4rem .38rem;
+  }
+
+  .hawkbat-discount-label {
+    margin-bottom: .18rem;
+    font-size: .43rem;
+    letter-spacing: .08em;
+  }
+
+  .hawkbat-discount strong {
+    font-size: .58rem;
+  }
+
+  .hawkbat-discount small {
+    margin-top: .2rem;
+    font-size: .4rem;
+    line-height: 1.25;
+  }
+
+  .hawkbat-ad-status {
+    margin-top: .38rem;
+    font-size: .43rem;
+    letter-spacing: .07em;
+  }
+
+  .hawkbat-rail-close {
+    top: -8px;
+    right: -5px;
+    width: 28px;
+    height: 28px;
+    font-size: .9rem;
+  }
+}

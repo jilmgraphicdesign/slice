@@ -9,7 +9,8 @@
 </head>
 <body class="archive-page">
 
-  <aside class="hawkbat-rail" aria-label="Hydian Logistics Wayguard Protocol advertisement">
+  <aside class="hawkbat-rail" id="hawkbatRail" aria-label="Hydian Logistics Wayguard Protocol advertisement">
+    <button class="hawkbat-rail-close" id="hawkbatRailClose" type="button" aria-label="Dismiss Hawk Bat advertisement">×</button>
     <button class="hawkbat-ad" id="hawkbatAd" type="button" aria-haspopup="dialog" aria-controls="hawkbatModal">
       <span class="hawkbat-image-slot hawkbat-image-slot-top">
         <img class="hawkbat-logo" src="assets/wp_logo.png" alt="Hydian Logistics Wayguard Protocol logo">
@@ -269,9 +270,11 @@
 
   <script>
     (() => {
+      const rail = document.getElementById("hawkbatRail");
       const ad = document.getElementById("hawkbatAd");
       const modal = document.getElementById("hawkbatModal");
       const close = document.getElementById("hawkbatClose");
+      const railClose = document.getElementById("hawkbatRailClose");
 
       function openHawkBat() {
         modal.hidden = false;
@@ -285,6 +288,11 @@
 
       ad.addEventListener("click", openHawkBat);
       close.addEventListener("click", closeHawkBat);
+
+      railClose.addEventListener("click", (event) => {
+        event.stopPropagation();
+        rail.hidden = true;
+      });
 
       modal.addEventListener("click", (event) => {
         if (event.target === modal) closeHawkBat();
