@@ -1448,3 +1448,614 @@ h1 {
     font-size: .9rem;
   }
 }
+
+/* =========================================================
+   SWRPG RULES QUICK REFERENCE
+   ========================================================= */
+
+.primary-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rules-page {
+  background:
+    radial-gradient(circle at 12% 4%, rgba(54,216,255,.15), transparent 31rem),
+    radial-gradient(circle at 88% 24%, rgba(255,43,194,.11), transparent 30rem),
+    radial-gradient(circle at 48% 92%, rgba(82,255,143,.075), transparent 34rem),
+    linear-gradient(180deg, #07030d 0%, #03070b 100%);
+}
+
+.rules-shell { width: min(1320px, calc(100% - 28px)); }
+.rules-masthead { min-height: 180px; }
+
+.rules-node {
+  width: 122px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  text-align: center;
+  border: 1px solid rgba(54,216,255,.52);
+  background: rgba(6,18,25,.38);
+  color: var(--cyan);
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  box-shadow: inset 0 0 22px rgba(54,216,255,.055), 0 0 20px rgba(54,216,255,.11);
+}
+.rules-node span {
+  font: 900 1.9rem/1 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: .06em;
+  text-shadow: 2px 0 var(--pink);
+}
+.rules-node small {
+  color: var(--green);
+  font: 700 .56rem/1 "Courier New", monospace;
+  letter-spacing: .14em;
+}
+
+.rules-control {
+  margin-top: 14px;
+  padding: 20px 22px;
+  position: sticky;
+  top: 10px;
+  z-index: 35;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: 20px;
+  align-items: end;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(8,4,18,.94), rgba(4,17,21,.94));
+}
+
+.rules-search-wrap label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--green);
+  font: 800 .69rem/1 "Courier New", monospace;
+  letter-spacing: .16em;
+}
+.rules-search-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.rules-search-row input {
+  min-width: 0;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid rgba(54,216,255,.38);
+  border-radius: 0;
+  outline: none;
+  background: rgba(2,8,13,.86);
+  color: #f6e7ff;
+  box-shadow: inset 0 0 18px rgba(54,216,255,.035);
+  font: 700 .83rem/1 "Courier New", monospace;
+}
+.rules-search-row input::placeholder { color: rgba(184,138,203,.72); }
+.rules-search-row input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 15px rgba(82,255,143,.13), inset 0 0 18px rgba(82,255,143,.035);
+}
+
+.rules-command,
+.rules-filter,
+.inline-source {
+  border: 1px solid rgba(255,43,194,.48);
+  border-radius: 0;
+  background: rgba(255,43,194,.055);
+  color: var(--pink-hot);
+  cursor: pointer;
+  font: 800 .65rem/1 "Courier New", monospace;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.rules-command { padding: 0 18px; }
+.rules-command:hover,
+.rules-command:focus-visible,
+.rules-filter:hover,
+.rules-filter:focus-visible,
+.inline-source:hover,
+.inline-source:focus-visible {
+  border-color: var(--green);
+  color: var(--green);
+  outline: none;
+  box-shadow: 0 0 13px rgba(82,255,143,.11);
+}
+.rules-search-status {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font: 700 .65rem/1.3 "Courier New", monospace;
+  letter-spacing: .06em;
+}
+.rules-filter-wrap { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.rules-filter { min-height: 34px; padding: 8px 10px; }
+.rules-filter.active {
+  border-color: rgba(82,255,143,.78);
+  color: var(--green);
+  background: rgba(82,255,143,.065);
+  box-shadow: inset 0 0 12px rgba(82,255,143,.045), 0 0 12px rgba(82,255,143,.08);
+}
+
+.rules-heading { margin-top: 18px; }
+.rules-quick-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.rules-quick-card {
+  min-height: 280px;
+  padding: 22px;
+  overflow: hidden;
+}
+.rules-quick-card h3 {
+  margin: 8px 0 13px;
+  color: #f8ddff;
+  font: 800 1.35rem/1.05 "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .02em;
+}
+.rules-quick-card p,
+.rules-quick-card li {
+  color: #dbc7e5;
+  font-size: .82rem;
+  line-height: 1.58;
+}
+.rules-quick-card p strong,
+.rules-quick-card li strong { color: var(--green); }
+.quick-code {
+  color: var(--pink-hot);
+  font: 800 .64rem/1 "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.quick-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+.quick-pills span {
+  padding: 6px 8px;
+  border: 1px solid rgba(54,216,255,.28);
+  color: var(--cyan);
+  background: rgba(54,216,255,.035);
+  font: 700 .62rem/1 "Courier New", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.quick-list { margin: 0; padding-left: 18px; }
+.quick-list li + li { margin-top: 7px; }
+.quick-list.numbered { padding-left: 22px; }
+.quick-note { margin: 12px 0 0; color: var(--muted) !important; font-size: .73rem !important; }
+
+.mini-table { border: 1px solid rgba(54,216,255,.19); }
+.mini-table > div {
+  min-height: 35px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid rgba(54,216,255,.12);
+  color: #d7bddf;
+  font-size: .72rem;
+}
+.mini-table > div:last-child { border-bottom: 0; }
+.mini-table strong { color: var(--green); }
+
+.symbol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.symbol {
+  min-height: 42px;
+  padding: 8px 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,.11);
+  color: #e9d7ef;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.symbol b {
+  min-width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  font: 900 .7rem/1 "Courier New", monospace;
+}
+.symbol.success, .symbol.advantage, .symbol.triumph { color: var(--green); }
+.symbol.failure, .symbol.threat, .symbol.despair { color: var(--pink-hot); }
+
+.inline-source {
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px 12px;
+}
+
+.rules-library-heading { margin-top: 28px; }
+.rule-library {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.rule-source {
+  border: 1px solid rgba(140,77,255,.33);
+  background: linear-gradient(135deg, rgba(140,77,255,.05), rgba(3,9,15,.84) 52%, rgba(54,216,255,.035));
+  box-shadow: inset 0 0 22px rgba(140,77,255,.035), 0 0 14px rgba(0,0,0,.12);
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+}
+.rule-source[hidden] { display: none !important; }
+.rule-source[open] {
+  grid-column: 1 / -1;
+  border-color: rgba(82,255,143,.43);
+}
+.rule-source > summary {
+  min-height: 92px;
+  padding: 17px 18px;
+  display: grid;
+  grid-template-columns: 54px minmax(0,1fr) auto;
+  gap: 14px;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+.rule-source > summary::-webkit-details-marker { display:none; }
+.rule-source > summary::marker { content:""; }
+.rule-source > summary:hover .source-copy strong { color: var(--green); }
+.rule-source > summary:focus-visible { outline: 1px solid var(--green); outline-offset: -6px; }
+.source-page {
+  color: var(--cyan);
+  font: 900 .74rem/1 "Courier New", monospace;
+  letter-spacing: .08em;
+}
+.source-copy { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.source-copy strong {
+  color: #f6dfff;
+  font: 800 1.03rem/1.12 "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .02em;
+}
+.source-copy small {
+  color: var(--muted);
+  font: 700 .61rem/1.3 "Courier New", monospace;
+  letter-spacing: .1em;
+}
+.source-action {
+  min-width: 72px;
+  padding: 9px 10px;
+  border: 1px solid rgba(255,43,194,.35);
+  color: var(--pink-hot);
+  text-align: center;
+  font: 800 .6rem/1 "Courier New", monospace;
+  letter-spacing: .1em;
+}
+.rule-source[open] > summary { border-bottom: 1px solid rgba(82,255,143,.16); }
+.rule-source[open] .source-action { color: var(--green); border-color: rgba(82,255,143,.38); }
+.source-body {
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+}
+.source-body > p {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #d6c0df;
+  font-size: .78rem;
+  line-height: 1.55;
+  text-align: center;
+}
+.source-image-button {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  border: 1px solid rgba(54,216,255,.28);
+  background: #02070a;
+  cursor: zoom-in;
+  box-shadow: 0 0 22px rgba(54,216,255,.08);
+}
+.source-image-button:hover,
+.source-image-button:focus-visible {
+  border-color: var(--green);
+  outline: none;
+  box-shadow: 0 0 24px rgba(82,255,143,.13);
+}
+.source-image-button img { width: 100%; height: auto; display: block; }
+
+.rules-footer {
+  margin-top: 18px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+  font: 700 .6rem/1.4 "Courier New", monospace;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.rules-viewer {
+  width: min(96vw, 1180px);
+  max-width: none;
+  height: min(94vh, 1280px);
+  max-height: none;
+  padding: 0;
+  border: 1px solid rgba(82,255,143,.5);
+  background: rgba(2,5,9,.98);
+  color: var(--text);
+  box-shadow: 0 0 60px rgba(0,0,0,.75), 0 0 28px rgba(82,255,143,.13);
+}
+.rules-viewer::backdrop { background: rgba(0,0,0,.86); backdrop-filter: blur(4px); }
+.viewer-bar {
+  min-height: 62px;
+  padding: 11px 14px 11px 17px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(54,216,255,.18);
+  background: rgba(4,9,14,.98);
+}
+.viewer-bar > div { display: flex; flex-direction: column; gap: 5px; }
+.viewer-bar strong {
+  color: #f8ddff;
+  font: 800 .82rem/1.2 "Courier New", monospace;
+  letter-spacing: .07em;
+}
+.viewer-bar button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,43,194,.48);
+  background: rgba(255,43,194,.06);
+  color: var(--pink-hot);
+  cursor: pointer;
+  font: 800 1.2rem/1 "Courier New", monospace;
+}
+.viewer-bar button:hover,
+.viewer-bar button:focus-visible { color: var(--green); border-color: var(--green); outline: none; }
+.viewer-stage { height: calc(100% - 62px); overflow: auto; padding: 16px; text-align: center; }
+.viewer-stage img { width: min(100%, 1100px); height: auto; display: inline-block; }
+
+@media (max-width: 1050px) {
+  .primary-nav { grid-template-columns: 1fr; }
+  .rules-control { grid-template-columns: 1fr; position: relative; top: auto; }
+  .rules-filter-wrap { justify-content: flex-start; }
+  .rules-quick-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 760px) {
+  .rules-node { display: none; }
+  .rules-quick-grid,
+  .rule-library { grid-template-columns: 1fr; }
+  .rule-source[open] { grid-column: auto; }
+  .rules-quick-card { min-height: 0; }
+  .rules-footer { flex-direction: column; }
+}
+
+@media (max-width: 520px) {
+  .rules-control { padding: 16px; }
+  .rules-search-row { grid-template-columns: 1fr; }
+  .rules-command { min-height: 42px; }
+  .rule-source > summary { grid-template-columns: 46px minmax(0,1fr); }
+  .source-action { grid-column: 1 / -1; width: 100%; }
+  .source-body { padding: 13px; }
+  .symbol-grid { grid-template-columns: 1fr; }
+  .rules-viewer { width: 100vw; height: 100vh; border: 0; }
+  .viewer-stage { padding: 7px; }
+}
+
+/* =========================
+   SWRPG rules-page additions
+   moved from rules.html
+   ========================= */
+.rules-page .swrpg-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.22));
+}
+
+.rules-page .symbol-grid .symbol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rules-page .symbol-grid .swrpg-icon {
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+  border-radius: 6px;
+  background: rgba(244, 248, 247, .94);
+  border: 1px solid rgba(54, 216, 255, .34);
+  box-shadow: 0 0 14px rgba(54, 216, 255, .16), inset 0 0 0 1px rgba(255,255,255,.55);
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.rules-page .difficulty-result {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.rules-page .difficulty-result .difficulty-name {
+  margin-right: 5px;
+  color: inherit;
+}
+
+.rules-page .difficulty-result .swrpg-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.22));
+}
+
+.rules-page .dice-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 10px;
+  margin-top: 12px;
+}
+
+.rules-page .die-key {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 1px solid rgba(54,216,255,.22);
+  background: rgba(5, 4, 14, .42);
+}
+
+.rules-page .die-key .swrpg-icon {
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.22));
+}
+
+.rules-page .die-key span {
+  font-size: .78rem;
+  line-height: 1.15;
+}
+
+.rules-page .rules-library-heading + .rules-control {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.rules-page .fall-table div,
+.rules-page .destiny-table div {
+  display: grid;
+  grid-template-columns: minmax(92px, .7fr) 1.3fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.rules-page .fall-table span:first-child,
+.rules-page .destiny-table span:first-child {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.rules-page .destiny-pair {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+
+.rules-page .destiny-side {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid rgba(54,216,255,.24);
+  background: rgba(5, 4, 14, .42);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.rules-page .destiny-side .destiny-icon {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 0 10px rgba(54,216,255,.12);
+  filter: none;
+}
+
+.rules-page .source-type-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border: 1px solid rgba(54,216,255,.22);
+  background: rgba(5,4,14,.34);
+}
+
+.rules-page .source-type-legend p {
+  flex: 1 1 320px;
+  margin: 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+.rules-page .source-type-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 3px 7px;
+  border: 1px solid currentColor;
+  font-size: .62rem;
+  line-height: 1.2;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: rgba(0,0,0,.25);
+}
+
+.rules-page .source-type-badge.result-spending { color: var(--pink-hot); }
+.rules-page .source-type-badge.procedure { color: var(--green); }
+.rules-page .source-type-badge.mixed { color: var(--cyan); }
+
+.rules-page .source-copy { align-items: flex-start; }
+
+@media (max-width: 640px) {
+  .rules-page .dice-legend { grid-template-columns: 1fr; }
+  .rules-page .difficulty-result .difficulty-name {
+    width: 100%;
+    text-align: right;
+    margin-right: 0;
+  }
+  .rules-page .fall-table div,
+  .rules-page .destiny-table div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* =========================================================
+   RULES PAGE TITLE — STAR WARS RPG GUIDE
+   Keep the glitch layers synced to the renamed heading.
+   ========================================================= */
+.rules-page .rules-masthead .glitch-title {
+  font-size: clamp(2.2rem, 5.2vw, 4.65rem);
+  line-height: .92;
+  letter-spacing: .01em;
+}
+
+.rules-page .rules-masthead .glitch-title::before,
+.rules-page .rules-masthead .glitch-title::after {
+  content: "STAR WARS RPG GUIDE";
+}
+
+/* Slightly tighter slices so the longer title reads cleanly. */
+.rules-page .rules-masthead .glitch-title::before {
+  clip-path: inset(22% 0 54% 0);
+  transform: translate(2px, 0);
+}
+
+.rules-page .rules-masthead .glitch-title::after {
+  clip-path: inset(67% 0 10% 0);
+  transform: translate(-2px, 0);
+}
+
+@media (max-width: 760px) {
+  .rules-page .rules-masthead .glitch-title {
+    font-size: clamp(2rem, 10vw, 3.3rem);
+    line-height: .96;
+  }
+}
