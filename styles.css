@@ -432,6 +432,8 @@ h1 {
 }
 
 
+
+
 /* =========================================================
    ARCHIVE STRUCTURE — built on the original transmission UI
    ========================================================= */
@@ -2058,4 +2060,77 @@ h1 {
     font-size: clamp(2rem, 10vw, 3.3rem);
     line-height: .96;
   }
+}
+
+
+/* =========================================================
+   KESH SIGNATURE — TX-002 ONLY
+   ========================================================= */
+.signature-kesh {
+  position: relative;
+  display: inline-block;
+  padding: 10px 22px 12px 14px;
+  font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(3.4rem, 9vw, 7rem);
+  line-height: .82;
+  font-weight: 500;
+  letter-spacing: .20em;
+  color: transparent;
+  -webkit-text-stroke: 1px #78cfff;
+  text-shadow: 0 0 6px rgba(80,180,255,.42);
+  filter: drop-shadow(4px 3px 0 rgba(255,45,120,.24));
+}
+
+.signature-kesh::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 10px 22px 12px 14px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,45,120,.78);
+  transform: translate(4px,3px);
+  clip-path: inset(52% 0 0 0);
+  opacity: .8;
+  pointer-events: none;
+}
+
+.signature-kesh::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: -10px;
+  top: 10%;
+  width: calc(100% + 20px);
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0 4%,
+    #ff2d78 4% 10%,
+    transparent 10% 14%,
+    #78cfff 14% 72%,
+    transparent 72% 78%,
+    #ff2d78 78% 87%,
+    transparent 87% 100%);
+  box-shadow: 0 0 5px rgba(120,207,255,.7), 0 0 8px rgba(255,45,120,.35);
+  animation: keshScanLine 4.5s linear infinite, keshLineGlitch 7s steps(1) infinite;
+  pointer-events: none;
+}
+
+@keyframes keshScanLine {
+  0% { top: 10%; }
+  45% { top: 48%; }
+  55% { top: 52%; }
+  100% { top: 90%; }
+}
+
+@keyframes keshLineGlitch {
+  0%,71%,78%,100% { transform: translateX(0) scaleX(1); opacity:.8; }
+  72% { transform: translateX(14px) scaleX(.88); opacity:1; }
+  73% { transform: translateX(-9px) scaleX(1.08); opacity:.35; }
+  74% { transform: translateX(22px) scaleX(.62); opacity:1; }
+  75% { transform: translateX(-4px) scaleX(.94); opacity:.55; }
+  76% { transform: translateX(7px) scaleX(1.03); opacity:1; }
+  77% { transform: translateX(0) scaleX(1); opacity:.8; }
+}
+
+@media (max-width:560px) {
+  .signature-kesh { font-size: clamp(2.8rem,16vw,4.8rem); letter-spacing:.12em; }
 }
