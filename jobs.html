@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09020f" />
+  <title>Contract Network // Jobs Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="jobs-page">
+  <div class="signal-noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="transmission-shell jobs-shell">
+
+    <!-- =====================================================
+         MAIN SITE NAVIGATION
+         This is the JOBS BOARD version, so that button is active.
+         ===================================================== -->
+    <nav class="primary-nav hud-frame" aria-label="Main archive navigation">
+      <a class="nav-button" href="index.html">
+        <span class="nav-kicker">SL1C3 // SECURE RELAY</span>
+        <strong>TRANSMISSION ARCHIVE</strong>
+        <small>Encrypted Holo-Net packets</small>
+      </a>
+      <a class="nav-button" href="dossier.html">
+        <span class="nav-kicker">KOHR ATLAS // ARCHIVE</span>
+        <strong>CREW DOSSIER</strong>
+        <small>Personnel &amp; history files</small>
+      </a>
+      <a class="nav-button active" href="jobs.html" aria-current="page">
+        <span class="nav-kicker">MULTI-CHANNEL // LIVE FEEDS</span>
+        <strong>JOBS BOARD</strong>
+        <small>Contracts, leads &amp; intercepted operations</small>
+      </a>
+      <a class="nav-button" href="rules.html">
+        <span class="nav-kicker">SWRPG // FIELD MANUAL</span>
+        <strong>RULES QUICK REFERENCE</strong>
+        <small>Searchable table rules &amp; source sheets</small>
+      </a>
+    </nav>
+
+    <header class="masthead archive-masthead jobs-masthead hud-frame">
+      <div>
+        <p class="eyebrow">MULTI-CHANNEL ACCESS // CONTRACTS // INTERCEPTED SIGNALS</p>
+        <h1 class="glitch-title dossier-display" data-text="CONTRACT NETWORK">CONTRACT NETWORK</h1>
+        <p class="subhead">JOBS BOARD // LIVE FEEDS</p>
+      </div>
+      <div class="jobs-node" aria-hidden="true">
+        <span>06</span>
+        <small>CHANNELS</small>
+      </div>
+    </header>
+
+    <section class="jobs-status-strip hud-frame" aria-label="Contract network status">
+      <div><span>NETWORK</span><strong>ONLINE</strong></div>
+      <div><span>ACTIVE FEEDS</span><strong>06</strong></div>
+      <div><span>CONTRACT DATA</span><strong>AWAITING INPUT</strong></div>
+      <div><span>ACCESS</span><strong>KOHR ATLAS</strong></div>
+    </section>
+
+    <section class="archive-directory-heading hud-frame jobs-heading">
+      <div>
+        <span class="directory-code">LIVE CHANNEL ARRAY</span>
+        <h2>Available Networks</h2>
+      </div>
+      <p>Each panel is an open terminal feed. Expand a mission slot when the GM is ready to add or reveal a job.</p>
+    </section>
+
+    <div class="network-workspace-bar">
+      <div class="workspace-title">
+        <span>NETWORK WORKSPACE // 06 OPEN WINDOWS</span>
+        <small>DRAG HEADERS // DOUBLE-CLICK TO MAXIMIZE // MINIMIZE TO DOCK</small>
+      </div>
+      <div class="workspace-tools">
+        <div class="window-dock" id="windowDock" aria-label="Minimized terminal windows"></div>
+        <button class="workspace-reset" id="resetWindows" type="button">RESET WINDOWS</button>
+        <div class="workspace-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+
+    <section class="multi-terminal-grid" aria-label="Faction contract terminals">
+
+      <!-- =====================================================
+           FACTION TERMINAL 01 — REBEL ALLIANCE
+           Add, remove, or duplicate MISSION TEMPLATE blocks below.
+           ===================================================== -->
+      <article class="faction-terminal terminal-rebel hud-frame terminal-wide" data-window-id="rebel" data-window-title="Rebel Alliance">
+        <header class="terminal-header">
+          <div>
+            <span class="terminal-channel">CH // 01</span>
+            <h2>REBEL ALLIANCE</h2>
+            <p>TACTICAL OPERATIONS NETWORK // SECURE RELAY</p>
+          </div>
+          <div class="terminal-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+
+        <div class="terminal-feed">
+          <!-- ================= MISSION TEMPLATE START =================
+               REBEL ALLIANCE MISSION SLOT 01
+               Replace the placeholder title and fields below.
+               Duplicate this entire <details> block to add another mission.
+               ========================================================= -->
+          <details class="job-slot">
+            <summary>
+              <span class="job-slot-code">MISSION // 01</span>
+              <span class="job-slot-title">EMPTY MISSION SLOT</span>
+              <span class="job-slot-action"></span>
+            </summary>
+            <div class="job-slot-body">
+              <div class="job-fields">
+                <div><span>EMPLOYER</span><strong>[ ADD EMPLOYER ]</strong></div>
+                <div><span>LOCATION</span><strong>[ ADD LOCATION ]</strong></div>
+                <div><span>REWARD</span><strong>[ ADD REWARD ]</strong></div>
+                <div><span>STATUS</span><strong>[ AVAILABLE / NEW / ACTIVE ]</strong></div>
+              </div>
+              <section class="job-text-block"><h3>Briefing</h3><p>[ ADD PLAYER-FACING MISSION BRIEFING HERE ]</p></section>
+              <section class="job-text-block"><h3>Known Intelligence</h3><p>[ ADD KNOWN INFORMATION HERE ]</p></section>
+              <section class="job-text-block"><h3>Leads</h3><p>[ ADD PEOPLE, LOCATIONS, SIGNALS, OR INVESTIGATION LEADS HERE ]</p></section>
+            </div>
+          </details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               REBEL ALLIANCE MISSION SLOT 02
+               ========================================================= -->
+          <details class="job-slot">
+            <summary><span class="job-slot-code">MISSION // 02</span><span class="job-slot-title">EMPTY MISSION SLOT</span><span class="job-slot-action"></span></summary>
+            <div class="job-slot-body"><p class="template-note">[ DUPLICATE THE FULL MISSION TEMPLATE ABOVE OR ADD JOB CONTENT HERE ]</p></div>
+          </details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+
+        <footer class="terminal-footer"><span>ALLIANCE ENCRYPTION // VERIFIED</span><b>FEED ACTIVE</b></footer>
+      </article>
+
+      <!-- =====================================================
+           FACTION TERMINAL 02 — HUTT CARTELS
+           ===================================================== -->
+      <article class="faction-terminal terminal-hutt hud-frame" data-window-id="hutt" data-window-title="Hutt Cartels">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">CH // 02</span><h2>HUTT CARTELS</h2><p>UNDERWORLD RELAY // OUTER RIM</p></div>
+          <div class="terminal-signal signal-mid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+        <div class="terminal-feed">
+          <!-- ================= MISSION TEMPLATE START =================
+               HUTT CARTEL MISSION SLOT 01
+               Duplicate this <details> block for additional Hutt jobs.
+               ========================================================= -->
+          <details class="job-slot">
+            <summary><span class="job-slot-code">CONTRACT // 01</span><span class="job-slot-title">EMPTY MISSION SLOT</span><span class="job-slot-action"></span></summary>
+            <div class="job-slot-body">
+              <div class="job-fields"><div><span>EMPLOYER</span><strong>[ ADD EMPLOYER ]</strong></div><div><span>LOCATION</span><strong>[ ADD LOCATION ]</strong></div><div><span>REWARD</span><strong>[ ADD REWARD ]</strong></div><div><span>STATUS</span><strong>[ ADD STATUS ]</strong></div></div>
+              <section class="job-text-block"><h3>Briefing</h3><p>[ ADD PLAYER-FACING MISSION BRIEFING HERE ]</p></section>
+              <section class="job-text-block"><h3>Known Intelligence</h3><p>[ ADD KNOWN INFORMATION HERE ]</p></section>
+              <section class="job-text-block"><h3>Leads</h3><p>[ ADD INVESTIGATION LEADS HERE ]</p></section>
+            </div>
+          </details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               HUTT CARTEL MISSION SLOT 02
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">CONTRACT // 02</span><span class="job-slot-title">EMPTY MISSION SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ ADD CONTRACT CONTENT HERE ]</p></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>SOURCE AUTHENTICATION // VARIABLE</span><b>FEED ACTIVE</b></footer>
+      </article>
+
+      <!-- =====================================================
+           FACTION TERMINAL 03 — IMPERIAL INTERCEPTS
+           These are intercepted operations, not necessarily jobs offered
+           directly to KOHR Atlas.
+           ===================================================== -->
+      <article class="faction-terminal terminal-imperial hud-frame terminal-wide terminal-offset" data-window-id="imperial" data-window-title="Imperial Intercepts">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">CH // 03</span><h2>IMPERIAL INTERCEPTS</h2><p>SECURE TRAFFIC CAPTURE // PARTIAL DECRYPTION</p></div>
+          <div class="terminal-signal signal-corrupt" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+        <div class="terminal-alert-line">AUTHORIZATION INVALID // INTERCEPT BUFFER OPEN</div>
+        <div class="terminal-feed">
+          <!-- ================= MISSION TEMPLATE START =================
+               IMPERIAL INTERCEPT SLOT 01
+               Use this for Imperial operations the players may investigate,
+               sabotage, intercept, or exploit.
+               ========================================================= -->
+          <details class="job-slot">
+            <summary><span class="job-slot-code">INTERCEPT // 01</span><span class="job-slot-title">EMPTY OPERATION SLOT</span><span class="job-slot-action"></span></summary>
+            <div class="job-slot-body">
+              <div class="job-fields"><div><span>ORIGIN</span><strong>[ ADD IMPERIAL SOURCE ]</strong></div><div><span>LOCATION</span><strong>[ ADD LOCATION ]</strong></div><div><span>DECRYPTION</span><strong>[ ADD % / STATUS ]</strong></div><div><span>PRIORITY</span><strong>[ ADD PRIORITY ]</strong></div></div>
+              <section class="job-text-block"><h3>Recovered Intelligence</h3><p>[ ADD THE INTERCEPTED INFORMATION HERE ]</p></section>
+              <section class="job-text-block"><h3>Potential Leads</h3><p>[ ADD WAYS THE CREW COULD INTERFERE OR INVESTIGATE ]</p></section>
+            </div>
+          </details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               IMPERIAL INTERCEPT SLOT 02
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">INTERCEPT // 02</span><span class="job-slot-title">EMPTY OPERATION SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ ADD INTERCEPTED OPERATION HERE ]</p></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>ISB SECURITY PROTOCOL // DETECTED</span><b>DECRYPTING</b></footer>
+      </article>
+
+      <!-- =====================================================
+           FACTION TERMINAL 04 — BLACK SUN
+           ===================================================== -->
+      <article class="faction-terminal terminal-blacksun hud-frame" data-window-id="blacksun" data-window-title="Black Sun">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">CH // 04</span><h2>BLACK SUN</h2><p>PRIVATE EXCHANGE // IDENTITY MASKED</p></div>
+          <div class="terminal-signal signal-mid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+        <div class="terminal-feed">
+          <!-- ================= MISSION TEMPLATE START =================
+               BLACK SUN MISSION SLOT 01
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">REQUEST // 01</span><span class="job-slot-title">EMPTY MISSION SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><div class="job-fields"><div><span>CLIENT</span><strong>[ MASKED / ADD CLIENT ]</strong></div><div><span>LOCATION</span><strong>[ ADD LOCATION ]</strong></div><div><span>PAYMENT</span><strong>[ ADD PAYMENT ]</strong></div><div><span>STATUS</span><strong>[ ADD STATUS ]</strong></div></div><section class="job-text-block"><h3>Request</h3><p>[ ADD BRIEFING HERE ]</p></section><section class="job-text-block"><h3>Known Intelligence</h3><p>[ ADD INTELLIGENCE HERE ]</p></section></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               BLACK SUN MISSION SLOT 02
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">REQUEST // 02</span><span class="job-slot-title">EMPTY MISSION SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ ADD REQUEST CONTENT HERE ]</p></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>ROUTING MASKED // PAYMENT CHANNEL CLOSED</span><b>FEED ACTIVE</b></footer>
+      </article>
+
+      <!-- =====================================================
+           FACTION TERMINAL 05 — BOUNTY NETWORK
+           ===================================================== -->
+      <article class="faction-terminal terminal-bounty hud-frame terminal-wide" data-window-id="bounty" data-window-title="Bounty Network">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">CH // 05</span><h2>BOUNTY NETWORK</h2><p>SECTOR TARGET EXCHANGE // ACTIVE NOTICES</p></div>
+          <div class="terminal-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+        <div class="terminal-feed job-slot-grid">
+          <!-- ================= MISSION TEMPLATE START =================
+               BOUNTY / TARGET SLOT 01
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">TARGET // 01</span><span class="job-slot-title">EMPTY BOUNTY SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><div class="job-fields"><div><span>TARGET</span><strong>[ ADD TARGET ]</strong></div><div><span>LAST KNOWN</span><strong>[ ADD LOCATION ]</strong></div><div><span>REWARD</span><strong>[ ADD REWARD ]</strong></div><div><span>CONDITION</span><strong>[ ALIVE / DEAD / INTACT ]</strong></div></div><section class="job-text-block"><h3>Notice</h3><p>[ ADD BOUNTY DETAILS HERE ]</p></section><section class="job-text-block"><h3>Known Associates</h3><p>[ ADD ASSOCIATES OR LEADS HERE ]</p></section></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               BOUNTY / TARGET SLOT 02
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">TARGET // 02</span><span class="job-slot-title">EMPTY BOUNTY SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ ADD BOUNTY CONTENT HERE ]</p></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>GUILD / PRIVATE / LOCAL NOTICES</span><b>FEED ACTIVE</b></footer>
+      </article>
+
+      <!-- =====================================================
+           FACTION TERMINAL 06 — UNKNOWN SIGNALS
+           ===================================================== -->
+      <article class="faction-terminal terminal-unknown hud-frame terminal-wide terminal-offset-right" data-window-id="unknown" data-window-title="Unknown Signals">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">CH // 06</span><h2>UNKNOWN SIGNALS</h2><p>UNIDENTIFIED SIGNAL BUFFER // UNVERIFIED LEADS</p></div>
+          <div class="terminal-signal signal-corrupt" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+        <div class="terminal-alert-line unknown-alert">SOURCE UNKNOWN // DO NOT ASSUME CONTRACT AUTHENTICITY</div>
+        <div class="terminal-feed job-slot-grid">
+          <!-- ================= MISSION TEMPLATE START =================
+               UNKNOWN SIGNAL SLOT 01
+               Use for distress beacons, derelicts, rumors, mysterious
+               coordinates, artifact leads, automated messages, etc.
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">UNVERIFIED // 01</span><span class="job-slot-title">EMPTY SIGNAL SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><div class="job-fields"><div><span>SOURCE</span><strong>[ UNKNOWN / ADD SOURCE ]</strong></div><div><span>LOCATION</span><strong>[ ADD LOCATION ]</strong></div><div><span>AGE</span><strong>[ ADD SIGNAL AGE ]</strong></div><div><span>STATUS</span><strong>[ ADD STATUS ]</strong></div></div><section class="job-text-block"><h3>Signal</h3><p>[ ADD SIGNAL, RUMOR, OR LEAD HERE ]</p></section><section class="job-text-block"><h3>Recovered Data</h3><p>[ ADD ANY PLAYER-FACING CLUES HERE ]</p></section></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+
+          <!-- ================= MISSION TEMPLATE START =================
+               UNKNOWN SIGNAL SLOT 02
+               ========================================================= -->
+          <details class="job-slot"><summary><span class="job-slot-code">UNVERIFIED // 02</span><span class="job-slot-title">EMPTY SIGNAL SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ ADD UNVERIFIED LEAD HERE ]</p></div></details>
+          <!-- ================== MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>BUFFER RECORDING // SOURCE UNVERIFIED</span><b>MONITORING</b></footer>
+      </article>
+
+    </section>
+
+    <!-- =====================================================
+         ARCHIVED OPERATIONS
+         Keep completed / failed / expired jobs here later.
+         ===================================================== -->
+    <section class="jobs-archive-section">
+      <article class="faction-terminal terminal-archive hud-frame terminal-wide">
+        <header class="terminal-header">
+          <div><span class="terminal-channel">ARCHIVE // 00</span><h2>ARCHIVED OPERATIONS</h2><p>COMPLETED // FAILED // EXPIRED CONTRACTS</p></div>
+        </header>
+        <div class="terminal-feed">
+          <!-- ================= ARCHIVED MISSION TEMPLATE START =================
+               Move completed jobs here later, or duplicate this placeholder.
+               ================================================================ -->
+          <details class="job-slot archived-slot"><summary><span class="job-slot-code">ARCHIVE // 01</span><span class="job-slot-title">EMPTY ARCHIVE SLOT</span><span class="job-slot-action"></span></summary><div class="job-slot-body"><p class="template-note">[ MOVE COMPLETED / FAILED / EXPIRED MISSION CONTENT HERE ]</p></div></details>
+          <!-- ================== ARCHIVED MISSION TEMPLATE END ================== -->
+        </div>
+        <footer class="terminal-footer"><span>HISTORICAL CONTRACT BUFFER</span><b>STANDBY</b></footer>
+      </article>
+    </section>
+
+  </main>
+  <script>
+(() => {
+  const workspace = document.querySelector('.multi-terminal-grid');
+  const dock = document.getElementById('windowDock');
+  const resetButton = document.getElementById('resetWindows');
+  if (!workspace || !dock) return;
+
+  const terminals = [...workspace.querySelectorAll('.faction-terminal[data-window-id]')];
+  const desktopQuery = window.matchMedia('(min-width: 901px)');
+  const STORAGE_KEY = 'kohr-atlas-job-window-layout-v3';
+
+  /*
+   * DEFAULT DESKTOP COMPOSITION
+   * -------------------------------
+   * Matches the intended two-column screenshot arrangement:
+   * Rebel / Hutt on top, Imperial / Black Sun in the middle,
+   * Bounty / Unknown Signals on the bottom. Values are proportional
+   * to the workspace width so the composition scales cleanly.
+   */
+  const DEFAULT_LAYOUT = {
+    rebel:    { left: 0.018, top: 34,  width: 0.420 },
+    hutt:     { left: 0.485, top: 18,  width: 0.490 },
+    imperial: { left: 0.024, top: 410, width: 0.475 },
+    blacksun: { left: 0.525, top: 405, width: 0.435 },
+    bounty:   { left: 0.040, top: 790, width: 0.420 },
+    unknown:  { left: 0.495, top: 782, width: 0.485 }
+  };
+
+  let desktopMode = false;
+  let topZ = 40;
+
+  const safeLoad = () => {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+    catch { return {}; }
+  };
+
+  const safeSave = (state) => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+    catch { /* Storage is optional; window controls still work without it. */ }
+  };
+
+  /*
+   * MOVEMENT SHELL
+   * -------------------------------
+   * The faction terminal itself keeps ALL of its faction CSS.
+   * This wrapper alone is translated while dragging, which prevents
+   * drag transforms from fighting with decorative terminal effects.
+   */
+  const makeWindowShell = (terminal) => {
+    if (terminal.parentElement?.classList.contains('window-position')) {
+      return terminal.parentElement;
+    }
+
+    const shell = document.createElement('div');
+    shell.className = 'window-position';
+    shell.dataset.windowId = terminal.dataset.windowId;
+    shell.dataset.windowTitle = terminal.dataset.windowTitle || terminal.dataset.windowId;
+    terminal.parentNode.insertBefore(shell, terminal);
+    shell.appendChild(terminal);
+    return shell;
+  };
+
+  const shells = terminals.map(makeWindowShell);
+
+  const getTerminal = (shell) => shell.querySelector('.faction-terminal');
+
+  const setOffset = (shell, x, y) => {
+    shell.dataset.x = String(x);
+    shell.dataset.y = String(y);
+    shell.style.setProperty('--window-x', `${x}px`);
+    shell.style.setProperty('--window-y', `${y}px`);
+  };
+
+  const getOffset = (shell) => ({
+    x: Number(shell.dataset.x || 0),
+    y: Number(shell.dataset.y || 0)
+  });
+
+  const bringToFront = (shell) => {
+    topZ += 1;
+    shell.style.zIndex = String(topZ);
+  };
+
+  const readState = () => {
+    const state = {};
+    shells.forEach(shell => {
+      const { x, y } = getOffset(shell);
+      state[shell.dataset.windowId] = {
+        x,
+        y,
+        minimized: shell.classList.contains('is-minimized'),
+        z: Number(shell.style.zIndex || 1)
+      };
+    });
+    return state;
+  };
+
+  const saveState = () => {
+    if (desktopMode) safeSave(readState());
+  };
+
+  const updateWorkspaceHeight = () => {
+    if (!desktopMode) return;
+
+    const workspaceRect = workspace.getBoundingClientRect();
+    let bottom = 0;
+
+    shells.forEach(shell => {
+      if (shell.classList.contains('is-minimized')) return;
+      const rect = shell.getBoundingClientRect();
+      bottom = Math.max(bottom, rect.bottom - workspaceRect.top);
+    });
+
+    workspace.style.height = `${Math.max(860, Math.ceil(bottom + 90))}px`;
+  };
+
+  const restoreButtonFor = (shell) => {
+    const id = shell.dataset.windowId;
+    let button = dock.querySelector(`[data-restore-window="${id}"]`);
+
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'dock-window-button';
+      button.dataset.restoreWindow = id;
+      button.textContent = shell.dataset.windowTitle || id;
+      button.addEventListener('click', () => restoreMinimized(shell));
+      dock.appendChild(button);
+    }
+
+    button.hidden = false;
+  };
+
+  const hideRestoreButton = (shell) => {
+    const button = dock.querySelector(`[data-restore-window="${shell.dataset.windowId}"]`);
+    if (button) button.hidden = true;
+  };
+
+  const minimize = (shell) => {
+    if (!desktopMode) return;
+    shell.classList.remove('is-maximized');
+    shell.classList.add('is-minimized');
+    restoreButtonFor(shell);
+    updateWorkspaceHeight();
+    saveState();
+  };
+
+  const restoreMinimized = (shell) => {
+    shell.classList.remove('is-minimized');
+    hideRestoreButton(shell);
+    bringToFront(shell);
+    updateWorkspaceHeight();
+    saveState();
+  };
+
+  const toggleMaximize = (shell) => {
+    if (!desktopMode) return;
+
+    const terminal = getTerminal(shell);
+    const maxButton = terminal?.querySelector('[data-window-action="maximize"]');
+    const isMaximized = shell.classList.toggle('is-maximized');
+
+    if (maxButton) {
+      maxButton.textContent = isMaximized ? '❐' : '□';
+      maxButton.setAttribute('aria-label', `${isMaximized ? 'Restore' : 'Maximize'} ${shell.dataset.windowTitle}`);
+    }
+
+    bringToFront(shell);
+    updateWorkspaceHeight();
+    saveState();
+  };
+
+  const startDrag = (event, shell, handle) => {
+    if (!desktopMode || shell.classList.contains('is-maximized')) return;
+    if (event.button !== 0 || event.target.closest('button, a, summary, input, textarea, select')) return;
+
+    event.preventDefault();
+    bringToFront(shell);
+    shell.classList.add('is-window-dragging');
+
+    const pointerId = event.pointerId;
+    const startPointerX = event.clientX;
+    const startPointerY = event.clientY;
+    const startOffset = getOffset(shell);
+    const baseLeft = Number(shell.dataset.baseLeft || 0);
+    const baseTop = Number(shell.dataset.baseTop || 0);
+    const shellWidth = shell.offsetWidth;
+
+    let nextX = startOffset.x;
+    let nextY = startOffset.y;
+    let frame = 0;
+
+    handle.setPointerCapture(pointerId);
+
+    const paint = () => {
+      frame = 0;
+      setOffset(shell, nextX, nextY);
+    };
+
+    const move = (ev) => {
+      const rawX = startOffset.x + (ev.clientX - startPointerX);
+      const rawY = startOffset.y + (ev.clientY - startPointerY);
+
+      const minX = -baseLeft;
+      const maxX = Math.max(minX, workspace.clientWidth - baseLeft - shellWidth);
+      const minY = -baseTop;
+
+      nextX = Math.max(minX, Math.min(maxX, rawX));
+      nextY = Math.max(minY, rawY);
+
+      if (!frame) frame = requestAnimationFrame(paint);
+    };
+
+    const end = () => {
+      if (frame) {
+        cancelAnimationFrame(frame);
+        paint();
+      }
+
+      shell.classList.remove('is-window-dragging');
+      handle.removeEventListener('pointermove', move);
+      handle.removeEventListener('pointerup', end);
+      handle.removeEventListener('pointercancel', end);
+
+      updateWorkspaceHeight();
+      saveState();
+    };
+
+    handle.addEventListener('pointermove', move);
+    handle.addEventListener('pointerup', end);
+    handle.addEventListener('pointercancel', end);
+  };
+
+  const injectWindowChrome = (shell) => {
+    const terminal = getTerminal(shell);
+    const header = terminal?.querySelector('.terminal-header');
+    if (!terminal || !header || header.querySelector('.window-controls')) return;
+
+    header.classList.add('window-drag-handle');
+    header.title = 'Drag this terminal';
+
+    const controls = document.createElement('div');
+    controls.className = 'window-controls';
+    controls.innerHTML = `
+      <button type="button" data-window-action="minimize" aria-label="Minimize ${shell.dataset.windowTitle}">—</button>
+      <button type="button" data-window-action="maximize" aria-label="Maximize ${shell.dataset.windowTitle}">□</button>`;
+    header.appendChild(controls);
+
+    controls.querySelector('[data-window-action="minimize"]').addEventListener('click', (event) => {
+      event.stopPropagation();
+      minimize(shell);
+    });
+
+    controls.querySelector('[data-window-action="maximize"]').addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleMaximize(shell);
+    });
+
+    header.addEventListener('dblclick', (event) => {
+      if (event.target.closest('button, a, summary, input, textarea, select')) return;
+      toggleMaximize(shell);
+    });
+
+    header.addEventListener('pointerdown', (event) => startDrag(event, shell, header));
+    terminal.addEventListener('pointerdown', () => desktopMode && bringToFront(shell));
+  };
+
+  const enterDesktopMode = () => {
+    if (desktopMode) return;
+
+    desktopMode = true;
+    workspace.classList.add('is-window-desktop');
+
+    const workspaceWidth = workspace.clientWidth;
+
+    shells.forEach(shell => {
+      const id = shell.dataset.windowId;
+      const preset = DEFAULT_LAYOUT[id] || { left: 0.03, top: 40, width: 0.44 };
+
+      const width = Math.min(workspaceWidth, Math.max(360, workspaceWidth * preset.width));
+      const left = Math.max(0, Math.min(workspaceWidth - width, workspaceWidth * preset.left));
+      const top = Math.max(0, preset.top);
+
+      shell.classList.add('is-desktop-window');
+      shell.style.left = `${left}px`;
+      shell.style.top = `${top}px`;
+      shell.style.width = `${width}px`;
+      shell.dataset.baseLeft = String(left);
+      shell.dataset.baseTop = String(top);
+      shell.dataset.defaultLeft = String(left);
+      shell.dataset.defaultTop = String(top);
+      shell.dataset.defaultWidth = String(width);
+      setOffset(shell, 0, 0);
+      bringToFront(shell);
+    });
+
+    const saved = safeLoad();
+    shells.forEach(shell => {
+      const state = saved[shell.dataset.windowId];
+      if (!state) return;
+
+      const baseLeft = Number(shell.dataset.baseLeft || 0);
+      const baseTop = Number(shell.dataset.baseTop || 0);
+      const maxX = Math.max(-baseLeft, workspace.clientWidth - baseLeft - shell.offsetWidth);
+      const x = Math.max(-baseLeft, Math.min(maxX, Number(state.x || 0)));
+      const y = Math.max(-baseTop, Number(state.y || 0));
+
+      setOffset(shell, x, y);
+      if (state.z) shell.style.zIndex = String(state.z);
+
+      if (state.minimized) {
+        shell.classList.add('is-minimized');
+        restoreButtonFor(shell);
+      }
+    });
+
+    updateWorkspaceHeight();
+  };
+
+  const leaveDesktopMode = () => {
+    if (!desktopMode) return;
+    desktopMode = false;
+
+    workspace.classList.remove('is-window-desktop');
+    workspace.style.height = '';
+    dock.innerHTML = '';
+
+    shells.forEach(shell => {
+      shell.classList.remove('is-desktop-window', 'is-minimized', 'is-maximized', 'is-window-dragging');
+      shell.style.left = '';
+      shell.style.top = '';
+      shell.style.width = '';
+      shell.style.zIndex = '';
+      shell.style.removeProperty('--window-x');
+      shell.style.removeProperty('--window-y');
+      delete shell.dataset.x;
+      delete shell.dataset.y;
+      delete shell.dataset.baseLeft;
+      delete shell.dataset.baseTop;
+
+      const maxButton = getTerminal(shell)?.querySelector('[data-window-action="maximize"]');
+      if (maxButton) {
+        maxButton.textContent = '□';
+        maxButton.setAttribute('aria-label', `Maximize ${shell.dataset.windowTitle}`);
+      }
+    });
+  };
+
+  const resetLayout = () => {
+    try { localStorage.removeItem(STORAGE_KEY); } catch {}
+
+    if (!desktopMode) return;
+
+    shells.forEach(shell => {
+      shell.classList.remove('is-minimized', 'is-maximized');
+      hideRestoreButton(shell);
+
+      const defaultLeft = Number(shell.dataset.defaultLeft || shell.dataset.baseLeft || 0);
+      const defaultTop = Number(shell.dataset.defaultTop || shell.dataset.baseTop || 0);
+      const defaultWidth = Number(shell.dataset.defaultWidth || shell.offsetWidth);
+
+      shell.style.left = `${defaultLeft}px`;
+      shell.style.top = `${defaultTop}px`;
+      shell.style.width = `${defaultWidth}px`;
+      shell.dataset.baseLeft = String(defaultLeft);
+      shell.dataset.baseTop = String(defaultTop);
+      setOffset(shell, 0, 0);
+      bringToFront(shell);
+
+      const maxButton = getTerminal(shell)?.querySelector('[data-window-action="maximize"]');
+      if (maxButton) maxButton.textContent = '□';
+    });
+
+    updateWorkspaceHeight();
+  };
+
+  shells.forEach(injectWindowChrome);
+  resetButton?.addEventListener('click', resetLayout);
+
+  const syncMode = () => desktopQuery.matches ? enterDesktopMode() : leaveDesktopMode();
+  syncMode();
+  desktopQuery.addEventListener?.('change', syncMode);
+})();
+  </script>
+</body>
+</html>

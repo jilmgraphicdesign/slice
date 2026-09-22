@@ -2134,3 +2134,1154 @@ h1 {
 @media (max-width:560px) {
   .signature-kesh { font-size: clamp(2.8rem,16vw,4.8rem); letter-spacing:.12em; }
 }
+
+/* =========================================================
+   CONTRACT NETWORK / JOBS BOARD
+   Added 2026-09-21
+   ========================================================= */
+
+/* Four top-level site destinations: Transmissions / Dossier / Jobs / Rules */
+.primary-nav {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.jobs-page {
+  background:
+    radial-gradient(circle at 12% 5%, rgba(82,255,143,.11), transparent 29rem),
+    radial-gradient(circle at 89% 20%, rgba(255,43,194,.12), transparent 31rem),
+    radial-gradient(circle at 50% 78%, rgba(140,77,255,.14), transparent 38rem),
+    linear-gradient(180deg, #08030e 0%, #02070a 100%);
+}
+
+.jobs-shell { width: min(1320px, calc(100% - 28px)); }
+.jobs-masthead { min-height: 178px; }
+
+.jobs-node {
+  width: 118px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid rgba(82,255,143,.48);
+  color: var(--green);
+  background: rgba(4,18,18,.30);
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  box-shadow: inset 0 0 22px rgba(82,255,143,.05), 0 0 20px rgba(82,255,143,.10);
+}
+.jobs-node span {
+  font: 900 2.25rem/1 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 0 var(--pink);
+}
+.jobs-node small {
+  margin-top: 8px;
+  color: var(--pink-hot);
+  font: 700 .55rem/1 "Courier New", monospace;
+  letter-spacing: .15em;
+}
+
+.jobs-status-strip {
+  margin-top: 14px;
+  padding: 15px 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px;
+}
+.jobs-status-strip div {
+  min-width: 0;
+  padding: 9px 12px;
+  border-left: 2px solid rgba(82,255,143,.35);
+  background: rgba(3,13,16,.28);
+}
+.jobs-status-strip span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font: 700 .56rem/1.2 "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.jobs-status-strip strong {
+  color: var(--green);
+  font: 800 .76rem/1.25 "Courier New", monospace;
+  letter-spacing: .08em;
+}
+.jobs-heading { margin-top: 18px; }
+
+.multi-terminal-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.faction-terminal {
+  grid-column: span 6;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(8,4,18,.92), rgba(3,12,16,.88)),
+    var(--panel);
+  border-color: rgba(140,77,255,.42);
+  box-shadow: inset 0 0 30px rgba(140,77,255,.055), 0 0 18px rgba(255,43,194,.09);
+}
+.faction-terminal.terminal-wide { grid-column: span 7; }
+.faction-terminal.terminal-offset { grid-column: 2 / span 8; }
+.faction-terminal.terminal-offset-right { grid-column: 4 / span 8; }
+
+.terminal-header {
+  min-height: 118px;
+  padding: 22px 24px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(82,255,143,.16);
+  background: linear-gradient(90deg, rgba(82,255,143,.035), transparent 42%, rgba(255,43,194,.035));
+}
+.terminal-channel {
+  color: var(--green);
+  font: 800 .62rem/1 "Courier New", monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.terminal-header h2 {
+  margin: 7px 0 5px;
+  color: #f7d9ff;
+  font: 900 clamp(1.35rem, 2.6vw, 2.15rem)/.95 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  text-shadow: 2px 0 0 rgba(255,43,194,.26), -1px 0 0 rgba(82,255,143,.25);
+}
+.terminal-header p {
+  margin: 0;
+  color: var(--muted);
+  font: 700 .62rem/1.45 "Courier New", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.terminal-signal {
+  width: 72px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.terminal-signal i {
+  width: 8px;
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(82,255,143,.45);
+}
+.terminal-signal i:nth-child(1){height:9px}.terminal-signal i:nth-child(2){height:14px}.terminal-signal i:nth-child(3){height:19px}.terminal-signal i:nth-child(4){height:25px}.terminal-signal i:nth-child(5){height:31px}
+.terminal-signal.signal-mid i:nth-child(5) { opacity: .20; }
+.terminal-signal.signal-mid i:nth-child(4) { opacity: .55; }
+.terminal-signal.signal-corrupt { animation: terminalSignalFlicker 2.6s steps(2) infinite; }
+.terminal-signal.signal-corrupt i:nth-child(2),
+.terminal-signal.signal-corrupt i:nth-child(5) { background: var(--pink-hot); }
+
+.terminal-alert-line {
+  padding: 10px 24px;
+  color: var(--pink-hot);
+  border-bottom: 1px solid rgba(255,43,194,.16);
+  background: rgba(255,43,194,.045);
+  font: 800 .59rem/1.3 "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  animation: terminalAlert 4.2s steps(1) infinite;
+}
+.unknown-alert { color: var(--cyan); }
+
+.terminal-feed {
+  padding: 18px 20px 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.job-slot {
+  border: 1px solid rgba(184,138,203,.24);
+  background: linear-gradient(135deg, rgba(140,77,255,.045), rgba(4,10,15,.56));
+  overflow: hidden;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.job-slot > summary {
+  min-height: 84px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  gap: 14px;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+.job-slot > summary::-webkit-details-marker { display: none; }
+.job-slot > summary::marker { content: ""; }
+.job-slot > summary:focus-visible { outline: 1px solid var(--green); outline-offset: -5px; }
+.job-slot-code {
+  color: var(--green);
+  font: 800 .57rem/1.2 "Courier New", monospace;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.job-slot-title {
+  color: #d8bddf;
+  font: 800 .94rem/1.15 "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.job-slot-action {
+  min-width: 92px;
+  padding: 9px 10px;
+  color: var(--pink-hot);
+  border: 1px solid rgba(255,43,194,.42);
+  text-align: center;
+  font: 800 .57rem/1 "Courier New", monospace;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.job-slot-action::before { content: "OPEN"; }
+.job-slot-action::after { content: "  ›"; color: var(--green); }
+.job-slot[open] .job-slot-action::before { content: "CLOSE"; }
+.job-slot[open] .job-slot-action::after { content: "  ×"; color: var(--pink-hot); }
+.job-slot > summary:hover { background: rgba(82,255,143,.025); }
+.job-slot > summary:hover .job-slot-title { color: var(--green); }
+.job-slot > summary:hover .job-slot-action { color: var(--green); border-color: rgba(82,255,143,.55); }
+.job-slot[open] { border-color: rgba(82,255,143,.30); }
+.job-slot[open] > summary { border-bottom: 1px solid rgba(82,255,143,.14); }
+
+.job-slot-body {
+  padding: 20px;
+  background: rgba(2,8,12,.34);
+}
+.job-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.job-fields div {
+  padding: 11px 12px;
+  border: 1px solid rgba(54,216,255,.14);
+  background: rgba(54,216,255,.018);
+}
+.job-fields span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font: 700 .54rem/1.2 "Courier New", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.job-fields strong {
+  color: var(--green);
+  font: 700 .72rem/1.35 "Courier New", monospace;
+}
+.job-text-block {
+  margin-top: 12px;
+  padding: 14px 15px;
+  border-left: 2px solid rgba(255,43,194,.40);
+  background: rgba(255,43,194,.025);
+}
+.job-text-block h3 {
+  margin: 0 0 8px;
+  color: var(--pink-hot);
+  font: 800 .72rem/1 "Courier New", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.job-text-block p,
+.template-note {
+  margin: 0;
+  color: #cbb0d6;
+  font: .82rem/1.65 "Courier New", monospace;
+}
+.template-note {
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: rgba(184,138,203,.62);
+  border: 1px dashed rgba(184,138,203,.20);
+}
+
+.terminal-footer {
+  padding: 11px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid rgba(54,216,255,.12);
+  background: rgba(2,7,11,.45);
+  font: 700 .54rem/1.35 "Courier New", monospace;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.terminal-footer span { color: var(--muted); }
+.terminal-footer b { color: var(--green); }
+
+/* Subtle personality by network, while keeping the same site-wide palette. */
+.terminal-rebel { border-color: rgba(82,255,143,.36); }
+.terminal-hutt { border-color: rgba(255,43,194,.45); }
+.terminal-imperial { border-color: rgba(255,43,194,.60); box-shadow: inset 0 0 30px rgba(255,43,194,.045), 0 0 20px rgba(255,43,194,.12); }
+.terminal-blacksun { border-color: rgba(140,77,255,.48); }
+.terminal-bounty { border-color: rgba(54,216,255,.40); }
+.terminal-unknown { border-color: rgba(54,216,255,.50); animation: unknownTerminalFlicker 8s steps(1) infinite; }
+
+.jobs-archive-section { margin-top: 28px; }
+.terminal-archive { width: 100%; opacity: .84; }
+.archived-slot { opacity: .72; }
+
+@keyframes terminalSignalFlicker {
+  0%, 78%, 82%, 100% { opacity: 1; transform: none; }
+  79% { opacity: .32; transform: translateX(3px); }
+  80% { opacity: .85; transform: translateX(-2px); }
+}
+@keyframes terminalAlert {
+  0%, 90%, 100% { filter: none; }
+  92% { filter: brightness(1.55); }
+  94% { filter: brightness(.7); }
+}
+@keyframes unknownTerminalFlicker {
+  0%, 53%, 55%, 86%, 88%, 100% { opacity: 1; }
+  54%, 87% { opacity: .78; }
+}
+
+@media (max-width: 1100px) {
+  .primary-nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .multi-terminal-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .faction-terminal,
+  .faction-terminal.terminal-wide,
+  .faction-terminal.terminal-offset,
+  .faction-terminal.terminal-offset-right { grid-column: auto; }
+}
+
+@media (max-width: 760px) {
+  .jobs-node { display: none; }
+  .jobs-status-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .multi-terminal-grid { grid-template-columns: 1fr; gap: 18px; }
+  .terminal-header { min-height: 0; }
+  .job-slot > summary { grid-template-columns: 1fr; gap: 9px; }
+  .job-slot-action { width: 100%; min-width: 0; }
+  .job-fields { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .primary-nav { grid-template-columns: 1fr; }
+  .jobs-status-strip { grid-template-columns: 1fr; }
+  .terminal-header { padding: 19px 18px 15px; }
+  .terminal-signal { display: none; }
+  .terminal-feed { padding: 14px; }
+  .job-slot-body { padding: 15px; }
+  .terminal-footer { flex-direction: column; gap: 4px; }
+}
+
+/* =========================================================
+   JOBS BOARD V2 // MULTI-SYSTEM NETWORK DESKTOP
+   Each faction window intentionally uses a different visual language.
+   The surrounding page still uses the shared KOHR Atlas HUD palette.
+   ========================================================= */
+
+.jobs-page {
+  --desktop-ink: #090510;
+  --desktop-glow: rgba(140,77,255,.18);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,43,194,.15), transparent 28rem),
+    radial-gradient(circle at 92% 18%, rgba(82,255,143,.10), transparent 30rem),
+    radial-gradient(circle at 52% 74%, rgba(54,216,255,.09), transparent 36rem),
+    linear-gradient(180deg, #08020f 0%, #03070a 100%);
+}
+
+.jobs-shell {
+  width: min(1500px, calc(100% - 30px));
+}
+
+.network-workspace-bar {
+  margin: 22px 0 0;
+  min-height: 38px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #d9bce7;
+  border: 1px solid rgba(140,77,255,.30);
+  border-bottom: 0;
+  background:
+    linear-gradient(90deg, rgba(255,43,194,.10), rgba(140,77,255,.08) 45%, rgba(82,255,143,.055));
+  box-shadow: inset 0 0 16px rgba(140,77,255,.06);
+  font: 800 .58rem/1 "Courier New", monospace;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.workspace-lights { display:flex; gap:7px; }
+.workspace-lights i {
+  width: 8px; height: 8px; display:block; border-radius:50%;
+  border: 1px solid currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
+.workspace-lights i:nth-child(1){ color:var(--pink); background:var(--pink); }
+.workspace-lights i:nth-child(2){ color:var(--purple); background:var(--purple); }
+.workspace-lights i:nth-child(3){ color:var(--green); background:var(--green); }
+
+.multi-terminal-grid {
+  position: relative;
+  margin-top: 0;
+  padding: 34px 26px 54px;
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0,1fr));
+  grid-auto-flow: row dense;
+  gap: 24px 18px;
+  align-items: start;
+  border: 1px solid rgba(140,77,255,.30);
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.014) 1px, transparent 1px),
+    radial-gradient(circle at 15% 15%, rgba(255,43,194,.075), transparent 25rem),
+    radial-gradient(circle at 78% 36%, rgba(54,216,255,.055), transparent 28rem),
+    linear-gradient(180deg, rgba(8,3,14,.92), rgba(2,8,12,.86));
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+  box-shadow:
+    inset 0 0 80px rgba(140,77,255,.06),
+    0 0 30px rgba(0,0,0,.30);
+  overflow: visible;
+}
+
+.multi-terminal-grid::before {
+  content: "LIVE NETWORK DESKTOP // SESSION MIRROR ACTIVE // FOREIGN UIs SANDBOXED";
+  position: absolute;
+  left: 18px;
+  bottom: 10px;
+  color: rgba(184,138,203,.42);
+  font: 700 .50rem/1 "Courier New", monospace;
+  letter-spacing: .14em;
+  pointer-events: none;
+}
+
+/* Base window: only geometry and interaction are shared. */
+.faction-terminal {
+  position: relative;
+  grid-column: span 8;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.faction-terminal:hover,
+.faction-terminal:focus-within {
+  z-index: 20 !important;
+  filter: brightness(1.035);
+}
+
+/* Deliberately uneven desktop placement. */
+.terminal-rebel { grid-column: 1 / span 9; z-index: 3; transform: translateY(2px); }
+.terminal-hutt { grid-column: 9 / span 8; z-index: 5; margin-top: 64px; transform: translateX(-8px); }
+.terminal-imperial { grid-column: 2 / span 10; z-index: 8; margin-top: -26px; transform: none; }
+.terminal-blacksun { grid-column: 10 / span 7; z-index: 6; margin-top: 30px; transform: translateX(-12px); }
+.terminal-bounty { grid-column: 1 / span 10; z-index: 5; margin-top: -22px; transform: translateX(6px); }
+.terminal-unknown { grid-column: 6 / span 11; z-index: 9; margin-top: 18px; transform: none; }
+
+/* Remove the shared HUD corner treatment inside foreign windows. */
+.faction-terminal.hud-frame { clip-path: none; }
+.faction-terminal.hud-frame::before,
+.faction-terminal.hud-frame::after { display:none; }
+
+/* =========================================================
+   REBEL ALLIANCE // clean military tactical uplink
+   ========================================================= */
+.terminal-rebel {
+  border: 1px solid rgba(82,255,143,.58);
+  border-left: 5px solid var(--green);
+  background:
+    linear-gradient(rgba(82,255,143,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82,255,143,.024) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(3,18,18,.96), rgba(4,9,15,.96));
+  background-size: 22px 22px,22px 22px,auto;
+  box-shadow: 0 0 22px rgba(82,255,143,.13), inset 0 0 30px rgba(82,255,143,.035);
+}
+.terminal-rebel .terminal-header {
+  position: relative;
+  min-height: 118px;
+  padding: 32px 24px 17px 30px;
+  border-bottom: 2px solid rgba(82,255,143,.42);
+  background: linear-gradient(90deg, rgba(82,255,143,.12), rgba(54,216,255,.035) 60%, transparent);
+}
+.terminal-rebel .terminal-header::before {
+  content:"ALLIANCE TACTICAL UPLINK";
+  position:absolute;
+  left:30px;
+  right:auto;
+  top:10px;
+  color:rgba(82,255,143,.60);
+  font:700 .48rem/1 "Courier New",monospace;
+  letter-spacing:.15em;
+  pointer-events:none;
+}
+.terminal-rebel .terminal-header h2 {
+  color:#d9fff0;
+  font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-shadow:0 0 12px rgba(82,255,143,.18);
+}
+.terminal-rebel .terminal-channel,
+.terminal-rebel .job-slot-code,
+.terminal-rebel .job-fields strong { color:var(--green); }
+.terminal-rebel .terminal-feed { padding: 20px 26px 24px 30px; }
+.terminal-rebel .job-slot {
+  clip-path:none;
+  border:0;
+  border-left:2px solid rgba(82,255,143,.52);
+  border-bottom:1px solid rgba(82,255,143,.17);
+  background:rgba(4,17,19,.54);
+}
+.terminal-rebel .job-slot > summary { min-height:74px; }
+.terminal-rebel .job-slot-action {
+  border-color:rgba(82,255,143,.45);
+  color:var(--green);
+  background:rgba(82,255,143,.04);
+}
+.terminal-rebel .job-text-block { border-left-color:var(--green); background:rgba(82,255,143,.03); }
+.terminal-rebel .job-text-block h3 { color:var(--green); }
+.terminal-rebel .terminal-footer { border-top:1px solid rgba(82,255,143,.38); }
+
+/* =========================================================
+   HUTT CARTELS // gaudy underworld broker console
+   ========================================================= */
+.terminal-hutt {
+  border: 3px double rgba(255,43,194,.68);
+  border-radius: 15px 4px 18px 5px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(255,198,76,.10), transparent 15rem),
+    linear-gradient(135deg, rgba(52,10,46,.98), rgba(19,6,27,.97) 55%, rgba(20,28,9,.94));
+  box-shadow: 0 0 28px rgba(255,43,194,.20), inset 0 0 34px rgba(255,43,194,.07);
+}
+.terminal-hutt .terminal-header {
+  position: relative;
+  min-height:142px;
+  padding:25px 24px 34px;
+  border-bottom:4px double rgba(255,198,76,.48);
+  background:linear-gradient(110deg,rgba(255,43,194,.18),rgba(140,77,255,.10),rgba(82,255,143,.06));
+}
+.terminal-hutt .terminal-header::before {
+  content:"CREDIT RELAY // BROKER NODE";
+  position:absolute;
+  left:24px;
+  bottom:10px;
+  color:#ffc64c;
+  font:700 .50rem/1 Georgia,serif;
+  letter-spacing:.14em;
+  pointer-events:none;
+}
+.terminal-hutt .terminal-header p {
+  margin-bottom:16px;
+}
+.terminal-hutt .terminal-header h2 {
+  color:#ffd9f7;
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:italic;
+  letter-spacing:.025em;
+  text-shadow:3px 2px 0 rgba(140,77,255,.42),0 0 14px rgba(255,43,194,.26);
+}
+.terminal-hutt .terminal-channel { color:#ffc64c; }
+.terminal-hutt .terminal-signal i { background:#ffc64c; box-shadow:0 0 8px rgba(255,198,76,.45); }
+.terminal-hutt .terminal-feed { padding:20px 18px 24px; }
+.terminal-hutt .job-slot {
+  border:1px solid rgba(255,198,76,.30);
+  border-radius:8px 2px 8px 2px;
+  clip-path:none;
+  background:linear-gradient(90deg,rgba(255,43,194,.08),rgba(10,7,17,.70));
+}
+.terminal-hutt .job-slot-code { color:#ffc64c; font-family:Georgia,serif; }
+.terminal-hutt .job-slot-title { color:#ffd7ef; font-family:Georgia,serif; font-style:italic; letter-spacing:.035em; }
+.terminal-hutt .job-slot-action {
+  border-radius:999px;
+  border-color:rgba(255,198,76,.38);
+  color:#ffc64c;
+  background:rgba(255,198,76,.045);
+}
+.terminal-hutt .job-fields div { border-color:rgba(255,198,76,.20); background:rgba(255,198,76,.025); }
+.terminal-hutt .job-fields strong { color:#ffc64c; }
+.terminal-hutt .job-text-block { border-left:0; border-top:1px dashed rgba(255,43,194,.38); }
+.terminal-hutt .job-text-block h3 { color:#ffc64c; font-family:Georgia,serif; }
+.terminal-hutt .terminal-footer b { color:#ffc64c; }
+
+/* =========================================================
+   IMPERIAL INTERCEPTS // captured retro Imperial workstation
+   Retro desktop-window language with black + Imperial red accents.
+   ========================================================= */
+.terminal-imperial {
+  border:2px solid #5e5e5e;
+  border-radius:3px;
+  background:#f2f2f2;
+  box-shadow:7px 8px 0 rgba(0,0,0,.18), 0 0 24px rgba(145,0,0,.08);
+  color:#111;
+}
+.terminal-imperial::before {
+  content:"IMPERIAL_SECURE_TERMINAL.EXE";
+  display:block;
+  padding:8px 78px 8px 11px;
+  color:#111;
+  background:linear-gradient(90deg,#ececec,#d9d9d9 52%,#cfcfcf 78%,#e9e9e9);
+  border-bottom:2px solid #6a6a6a;
+  font:700 .62rem/1 Arial,sans-serif;
+  letter-spacing:.04em;
+}
+.terminal-imperial::after {
+  content:"_  □  ×";
+  position:absolute;
+  right:10px;
+  top:7px;
+  color:#111;
+  font:900 .70rem/1 Arial,sans-serif;
+  letter-spacing:.25em;
+}
+.terminal-imperial .terminal-header {
+  min-height:100px;
+  padding:18px 20px 14px;
+  border-bottom:2px outset #b9b9b9;
+  background:linear-gradient(180deg,#f9f9f9,#e7e7e7);
+}
+.terminal-imperial .terminal-header h2 {
+  color:#111;
+  font-family:Arial,Helvetica,sans-serif;
+  letter-spacing:.02em;
+  text-shadow:1px 0 #ffffff;
+}
+.terminal-imperial .terminal-header p,
+.terminal-imperial .terminal-channel { color:#555; }
+.terminal-imperial .terminal-signal i,
+.terminal-imperial .terminal-signal.signal-corrupt i,
+.terminal-imperial .terminal-signal.signal-corrupt i:nth-child(2),
+.terminal-imperial .terminal-signal.signal-corrupt i:nth-child(5) {
+  background:#c20d0d;
+  box-shadow:0 0 7px rgba(194,13,13,.22);
+}
+.terminal-imperial .terminal-alert-line {
+  color:#fff;
+  border:0;
+  border-bottom:2px solid #8e1111;
+  background:linear-gradient(90deg,#8c0d0d,#b81313,#8c0d0d);
+  font-family:Arial,Helvetica,sans-serif;
+  letter-spacing:.08em;
+}
+.terminal-imperial .terminal-feed {
+  background:#efefef;
+  padding:16px;
+}
+.terminal-imperial .job-slot {
+  clip-path:none;
+  border:2px outset #c4c4c4;
+  background:#ffffff;
+  color:#111;
+}
+.terminal-imperial .job-slot > summary { min-height:74px; border-left:0; }
+.terminal-imperial .job-slot-code { color:#c20d0d; }
+.terminal-imperial .job-slot-title {
+  color:#111;
+  font-family:Arial,sans-serif;
+  letter-spacing:.02em;
+}
+.terminal-imperial .job-slot-action {
+  color:#111;
+  border:2px outset #a9a9a9;
+  background:#f4f4f4;
+  font-family:Arial,sans-serif;
+}
+.terminal-imperial .job-slot > summary:hover {
+  background:#f6e9e9;
+}
+.terminal-imperial .job-slot > summary:hover .job-slot-title,
+.terminal-imperial .job-slot > summary:hover .job-slot-action { color:#8f1111; }
+.terminal-imperial .job-slot-body { background:#fafafa; }
+.terminal-imperial .job-fields div {
+  border:1px solid #d0b4b4;
+  background:#ffffff;
+}
+.terminal-imperial .job-fields span { color:#626262; }
+.terminal-imperial .job-fields strong { color:#b31313; }
+.terminal-imperial .job-text-block {
+  border-left:3px solid #b00000;
+  background:#ffffff;
+}
+.terminal-imperial .job-text-block h3 { color:#b00000; }
+.terminal-imperial .job-text-block p,
+.terminal-imperial .template-note { color:#333; }
+.terminal-imperial .terminal-footer {
+  color:#222;
+  border-top:2px outset #c2c2c2;
+  background:#ededed;
+}
+.terminal-imperial .terminal-footer span { color:#666; }
+.terminal-imperial .terminal-footer b { color:#b00000; }
+
+/* =========================================================
+   BLACK SUN // angular foreign-network interface
+   Uses the former Unknown Regions visual language, but keeps
+   Black Sun's elegant serif typography.
+   ========================================================= */
+.terminal-blacksun {
+  border:1px solid rgba(140,77,255,.75);
+  background:
+    linear-gradient(115deg,transparent 0 48%,rgba(54,216,255,.025) 48% 52%,transparent 52%),
+    radial-gradient(circle at 16% 78%,rgba(54,216,255,.08),transparent 13rem),
+    linear-gradient(180deg,#07051a,#080210 70%,#02070e);
+  box-shadow:0 0 28px rgba(140,77,255,.20),inset 0 0 32px rgba(54,216,255,.035);
+  clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,28px 100%,0 calc(100% - 28px));
+}
+.terminal-blacksun::before {
+  content:"◆ BLACK SUN // PRIVATE ROUTING // MASKED ◆";
+  position:absolute;
+  right:8px; top:138px;
+  color:rgba(54,216,255,.24);
+  writing-mode:vertical-rl;
+  font:700 .58rem/1 "Courier New",monospace;
+  letter-spacing:.17em;
+}
+.terminal-blacksun .terminal-header {
+  min-height:132px;
+  padding-right:38px;
+  border-bottom:1px solid rgba(54,216,255,.26);
+  background:linear-gradient(90deg,rgba(140,77,255,.14),transparent 70%);
+}
+.terminal-blacksun .terminal-header h2 {
+  color:#eee5ff;
+  font-family:"Times New Roman",Georgia,serif;
+  font-weight:400;
+  letter-spacing:.26em;
+  text-shadow:-2px 0 var(--cyan),2px 0 rgba(255,43,194,.35),0 0 18px rgba(140,77,255,.28);
+}
+.terminal-blacksun .terminal-channel,
+.terminal-blacksun .job-slot-code { color:var(--cyan); }
+.terminal-blacksun .terminal-signal { gap:7px; }
+.terminal-blacksun .terminal-signal i { width:6px; border-radius:50%; background:var(--cyan); box-shadow:0 0 8px rgba(54,216,255,.35); }
+.terminal-blacksun .terminal-feed { padding-right:34px; }
+.terminal-blacksun .job-slot {
+  border-color:rgba(140,77,255,.34);
+  background:linear-gradient(110deg,rgba(140,77,255,.055),rgba(3,9,18,.66));
+  clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);
+}
+.terminal-blacksun .job-slot-title {
+  color:#d8d5f4;
+  font-family:"Times New Roman",Georgia,serif;
+  font-weight:400;
+  letter-spacing:.13em;
+}
+.terminal-blacksun .job-slot-action { color:var(--cyan); border-color:rgba(54,216,255,.34); }
+.terminal-blacksun .job-fields strong { color:#c5b0ff; }
+.terminal-blacksun .job-text-block { border-left-color:var(--cyan); }
+.terminal-blacksun .job-text-block h3 { color:var(--cyan); font-family:"Times New Roman",Georgia,serif; letter-spacing:.10em; }
+.terminal-blacksun .terminal-footer b { color:var(--cyan); }
+
+/* =========================================================
+   BOUNTY NETWORK // tracking scanner / target exchange
+   ========================================================= */
+.terminal-bounty {
+  border:2px solid rgba(54,216,255,.62);
+  background:
+    linear-gradient(rgba(54,216,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(54,216,255,.035) 1px,transparent 1px),
+    radial-gradient(circle at 88% 24%, transparent 0 34px,rgba(54,216,255,.12) 35px 36px,transparent 37px 58px,rgba(54,216,255,.06) 59px 60px,transparent 61px),
+    linear-gradient(180deg,#021118,#05070d);
+  background-size:18px 18px,18px 18px,auto,auto;
+  box-shadow:0 0 26px rgba(54,216,255,.15),inset 0 0 28px rgba(54,216,255,.035);
+  clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px);
+}
+.terminal-bounty .terminal-header {
+  min-height:114px;
+  border-bottom:1px solid rgba(54,216,255,.45);
+  background:linear-gradient(90deg,rgba(54,216,255,.11),transparent 55%);
+}
+.terminal-bounty .terminal-header h2 {
+  color:#d9fbff;
+  font-family:"Courier New",monospace;
+  letter-spacing:.10em;
+  text-shadow:2px 0 var(--pink),0 0 10px rgba(54,216,255,.25);
+}
+.terminal-bounty .terminal-channel,
+.terminal-bounty .job-slot-code,
+.terminal-bounty .job-fields strong { color:var(--cyan); }
+.terminal-bounty .terminal-signal i { background:var(--cyan); box-shadow:0 0 8px rgba(54,216,255,.52); }
+.terminal-bounty .terminal-feed.job-slot-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.terminal-bounty .job-slot {
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  border-color:rgba(54,216,255,.30);
+  background:rgba(2,16,23,.70);
+}
+.terminal-bounty .job-slot > summary { grid-template-columns:1fr auto; align-items:start; }
+.terminal-bounty .job-slot-code { grid-column:1 / -1; }
+.terminal-bounty .job-slot-title { color:#d7f6fa; }
+.terminal-bounty .job-slot-action { border-color:rgba(54,216,255,.40); color:var(--cyan); }
+.terminal-bounty .job-text-block { border-left-color:var(--cyan); background:rgba(54,216,255,.025); }
+.terminal-bounty .job-text-block h3 { color:var(--cyan); }
+.terminal-bounty .terminal-footer b { color:var(--cyan); }
+
+/* =========================================================
+   UNKNOWN SIGNALS // broken/glitched recovered interface
+   ========================================================= */
+.terminal-unknown {
+  border:1px solid rgba(255,43,194,.62);
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 4px),
+    linear-gradient(95deg,rgba(255,43,194,.055),transparent 32%,rgba(54,216,255,.045) 68%,transparent),
+    #05050b;
+  box-shadow:0 0 30px rgba(255,43,194,.18),inset 0 0 36px rgba(54,216,255,.035);
+  animation:unknownTerminalFlicker 8s steps(1) infinite;
+}
+.terminal-unknown::before,
+.terminal-unknown::after {
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  height:7px;
+  pointer-events:none;
+  z-index:5;
+  background:linear-gradient(90deg,transparent,var(--pink),var(--cyan),transparent);
+  opacity:.20;
+  animation:unknownScan 5.2s steps(3) infinite;
+}
+.terminal-unknown::before { top:29%; }
+.terminal-unknown::after { top:72%; animation-delay:-2.4s; }
+.terminal-unknown .terminal-header {
+  border-bottom:1px dashed rgba(54,216,255,.35);
+  background:linear-gradient(90deg,rgba(255,43,194,.09),transparent,rgba(54,216,255,.055));
+}
+.terminal-unknown .terminal-header h2 {
+  color:#fff;
+  font-family:"Courier New",monospace;
+  letter-spacing:.10em;
+  text-shadow:5px 0 0 rgba(255,43,194,.34),-4px 0 0 rgba(54,216,255,.28);
+  animation:unknownTitleJitter 4.8s steps(1) infinite;
+}
+.terminal-unknown .terminal-alert-line {
+  color:#fff;
+  border-bottom:1px dashed rgba(255,43,194,.40);
+  background:repeating-linear-gradient(90deg,rgba(255,43,194,.12) 0 18px,rgba(54,216,255,.045) 18px 36px);
+}
+.terminal-unknown .job-slot-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.terminal-unknown .job-slot {
+  border:1px dashed rgba(54,216,255,.34);
+  clip-path:none;
+  background:rgba(3,8,14,.68);
+}
+.terminal-unknown .job-slot:nth-child(even) { transform:none; }
+.terminal-unknown .job-slot-code { color:var(--cyan); }
+.terminal-unknown .job-slot-title { color:#f0d9f1; }
+.terminal-unknown .job-slot-action { border-style:dashed; }
+.terminal-unknown .job-fields strong { color:var(--cyan); }
+.terminal-unknown .job-text-block { border-left-color:var(--pink); }
+.terminal-unknown .terminal-footer { border-top-style:dashed; }
+
+/* =========================================================
+   ARCHIVED OPERATIONS // subdued local cache
+   ========================================================= */
+.terminal-archive {
+  width:100%;
+  opacity:.82;
+  border:1px solid rgba(184,138,203,.28);
+  background:linear-gradient(180deg,rgba(13,10,16,.92),rgba(6,7,10,.92));
+  filter:saturate(.72);
+}
+.terminal-archive .terminal-header { min-height:92px; background:rgba(184,138,203,.035); }
+.terminal-archive .terminal-header h2 { font-family:"Courier New",monospace; font-size:1.35rem; color:#c7b6cf; text-shadow:none; }
+
+@keyframes unknownScan {
+  0%,100%{ transform:translateX(-6%); opacity:.05; }
+  48%{ transform:translateX(4%); opacity:.25; }
+  52%{ transform:translateX(-2%); opacity:.10; }
+}
+@keyframes unknownTitleJitter {
+  0%,83%,86%,100%{ transform:none; }
+  84%{ transform:translateX(5px); }
+  85%{ transform:translateX(-3px); }
+}
+
+@media (max-width: 1160px) {
+  .multi-terminal-grid { grid-template-columns:repeat(2,minmax(0,1fr)); padding:24px 18px 42px; }
+  .terminal-rebel,.terminal-hutt,.terminal-imperial,.terminal-blacksun,
+  .terminal-bounty,.terminal-unknown {
+    grid-column:auto;
+    margin-top:0;
+    transform:none;
+  }
+  .terminal-bounty .terminal-feed.job-slot-grid,
+  .terminal-unknown .job-slot-grid { grid-template-columns:1fr; }
+}
+
+@media (max-width: 760px) {
+  .network-workspace-bar { margin-top:16px; }
+  .multi-terminal-grid { grid-template-columns:1fr; padding:18px 12px 38px; gap:18px; }
+  .faction-terminal { transform:none !important; border-radius:0; }
+  .terminal-rebel,.terminal-hutt,.terminal-imperial,.terminal-blacksun,
+  .terminal-bounty,.terminal-unknown { grid-column:1; }
+  .terminal-imperial::before { padding-right:72px; }
+  .terminal-bounty { clip-path:none; }
+  .terminal-blacksun { clip-path:none; }
+}
+
+/* =========================================================
+   JOBS BOARD V6 // CLEAN DESKTOP WINDOW SHELL
+   ---------------------------------------------------------
+   IMPORTANT:
+   - .window-position is the ONLY element moved by JavaScript.
+   - .faction-terminal keeps all faction-specific visual CSS.
+   - No manual resizing: drag, focus, minimize, maximize, reset.
+   ========================================================= */
+
+.workspace-title {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  min-width:0;
+}
+.workspace-title small {
+  color:rgba(184,138,203,.62);
+  font-size:.48rem;
+  letter-spacing:.12em;
+}
+.workspace-tools {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  min-width:0;
+}
+.window-dock {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.dock-window-button,
+.workspace-reset {
+  min-height:30px;
+  padding:7px 10px;
+  border:1px solid rgba(82,255,143,.34);
+  background:rgba(5,15,16,.80);
+  color:var(--green);
+  font:800 .52rem/1 "Courier New",monospace;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.dock-window-button:hover,
+.dock-window-button:focus-visible,
+.workspace-reset:hover,
+.workspace-reset:focus-visible {
+  color:#fff;
+  border-color:var(--pink-hot);
+  box-shadow:0 0 12px rgba(255,43,194,.20);
+  outline:none;
+}
+
+/* Wrappers are invisible in normal responsive/grid mode. */
+.window-position { display:contents; }
+
+.multi-terminal-grid.is-window-desktop {
+  display:block;
+  min-height:860px;
+}
+
+.multi-terminal-grid.is-window-desktop .window-position.is-desktop-window {
+  display:block;
+  position:absolute;
+  transform:translate3d(var(--window-x, 0px), var(--window-y, 0px), 0);
+  transition:none;
+}
+
+/* The inner art no longer participates in movement. */
+.multi-terminal-grid.is-window-desktop .window-position > .faction-terminal {
+  width:100%;
+  margin:0 !important;
+  transform:none !important;
+  grid-column:auto !important;
+  z-index:auto !important;
+}
+
+.window-position.is-window-dragging {
+  will-change:transform;
+}
+.window-position.is-window-dragging > .faction-terminal {
+  filter:brightness(1.045);
+  box-shadow:0 18px 50px rgba(0,0,0,.42),0 0 26px rgba(255,43,194,.12);
+}
+
+.window-position.is-minimized { display:none !important; }
+
+.window-position.is-maximized {
+  left:0 !important;
+  top:0 !important;
+  width:100% !important;
+  transform:none !important;
+  z-index:999 !important;
+}
+.window-position.is-maximized > .faction-terminal {
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+
+.window-drag-handle {
+  cursor:grab;
+  user-select:none;
+  touch-action:none;
+}
+.window-position.is-window-dragging .window-drag-handle { cursor:grabbing; }
+
+.window-controls {
+  position:absolute;
+  right:16px;
+  top:14px;
+  z-index:30;
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.window-controls button {
+  width:30px;
+  height:26px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(4,5,10,.72);
+  color:currentColor;
+  font:900 .75rem/1 Arial,sans-serif;
+  cursor:pointer;
+}
+.window-controls button:hover,
+.window-controls button:focus-visible {
+  border-color:currentColor;
+  background:rgba(255,255,255,.08);
+  outline:none;
+}
+
+/* Faction-specific window chrome. */
+.terminal-rebel .window-controls { color:var(--green); }
+.terminal-rebel .window-controls button {
+  border-color:rgba(82,255,143,.42);
+  background:rgba(2,16,14,.82);
+}
+
+.terminal-hutt .window-controls { color:#ffc64c; }
+.terminal-hutt .window-controls button {
+  border-radius:999px;
+  border-color:rgba(255,198,76,.45);
+  background:rgba(55,8,43,.78);
+}
+
+/* Imperial controls sit in its faux application title bar. */
+.terminal-imperial .terminal-feed {
+  background: #e3e3e3;
+  padding: 16px;
+}
+
+.terminal-imperial .job-slot {
+  clip-path: none;
+  border: 2px outset #7a7a7a;
+  background: #b8b8b8;
+  color: #111;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #5f5f5f;
+}
+
+.terminal-imperial .job-slot > summary {
+  min-height: 74px;
+  border-left: 0;
+  background: #b8b8b8;
+}
+
+.terminal-imperial .job-slot-code {
+  color: #7a0000;
+}
+
+.terminal-imperial .job-slot-title {
+  color: #111;
+  font-family: Arial, sans-serif;
+  letter-spacing: .02em;
+}
+
+.terminal-imperial .job-slot-action {
+  color: #5e0000;
+  border: 2px outset #7a7a7a;
+  background: #b8b8b8;
+  font-family: Arial, sans-serif;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #5f5f5f;
+}
+
+.terminal-imperial .job-slot > summary:hover {
+  background: #8f1010;
+}
+
+.terminal-imperial .job-slot > summary:hover .job-slot-title,
+.terminal-imperial .job-slot > summary:hover .job-slot-code,
+.terminal-imperial .job-slot > summary:hover .job-slot-action {
+  color: #ffffff;
+}
+
+.terminal-imperial .job-slot > summary:hover .job-slot-action {
+  background: #5e0000;
+  border-color: #3d0000;
+}
+
+.terminal-blacksun .window-controls { color:var(--cyan); }
+.terminal-blacksun .window-controls button {
+  border-color:rgba(54,216,255,.30);
+  background:rgba(5,4,20,.80);
+  font-family:"Times New Roman",Georgia,serif;
+}
+
+.terminal-bounty .window-controls { color:var(--cyan); }
+.terminal-bounty .window-controls button {
+  clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);
+  border-color:rgba(54,216,255,.45);
+  background:#031117;
+}
+
+.terminal-unknown .window-controls { color:#fff; }
+.terminal-unknown .window-controls button {
+  border-style:dashed;
+  border-color:rgba(255,43,194,.48);
+  background:rgba(8,3,13,.84);
+  text-shadow:2px 0 var(--pink),-2px 0 var(--cyan);
+}
+
+/* Interactive desktop mode: normal laptop widths and larger. */
+@media (min-width:901px) {
+  .window-controls { display:flex; }
+  .window-dock { display:flex; }
+  .workspace-reset { display:block; }
+}
+
+/* Static, stacked interface on tablets/phones. */
+@media (max-width:900px) {
+  .workspace-title small { display:none; }
+  .window-dock,
+  .workspace-reset,
+  .window-controls { display:none !important; }
+  .window-drag-handle {
+    cursor:default;
+    touch-action:auto;
+  }
+}
+
+/* Lower all signal trackers so they clear the window controls */
+.terminal-signal {
+  position: relative;
+  top: 30px;
+}
+
+.terminal-rebel .terminal-signal { top: 20px; }
+.terminal-hutt .terminal-signal { top: 20px; }
+.terminal-blacksun .terminal-signal { top: 20px; }
+.terminal-bounty .terminal-signal { top: 18px; }
+.terminal-unknown .terminal-signal { top: 18px; }
+}
+}
