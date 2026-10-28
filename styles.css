@@ -3285,3 +3285,87 @@ h1 {
 .terminal-unknown .terminal-signal { top: 18px; }
 }
 }
+
+
+/* TX-003—005 archive attachment styling */
+
+    /* TX-003 / TX-004 conversation archive: self-contained styling */
+    .conversation-chain { display:grid; gap:1rem; padding:1.15rem 0 1.6rem; }
+    .chain-intro { padding:1rem 1.2rem; }
+    .chain-intro h2 { margin:.35rem 0; letter-spacing:.09em; }
+    .chain-intro p { margin:.3rem 0; }
+    .packet { padding:1.1rem 1.35rem; min-width:0; border-left:3px solid rgba(219,79,178,.55); }
+    .packet-slice { border-left-color:#51c9e3; }
+    .packet-chav { border-left-color:#ebba80; }
+    .packet-kesh { border-left-color:#9f91f4; }
+    .packet-ego { border-left-color:#eb79c3; }
+    .packet-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.4rem 1rem; padding-bottom:.7rem; margin-bottom:.8rem; border-bottom:1px solid rgba(204,172,216,.24); }
+    .packet-head strong { color:#f2d8ef; letter-spacing:.15em; }
+    .packet-head small { color:#ad9bb9; font-family:monospace; letter-spacing:.06em; }
+    .packet p { margin:.65rem 0; line-height:1.65; overflow-wrap:anywhere; }
+    .packet p:last-child { margin-bottom:0; }
+    .packet p:first-of-type { margin-top:0; }
+    .packet .packet-noise { color:#9c8ed3; font-style:italic; font-family:monospace; }
+    .packet .packet-direction { color:#dba9c8; font-style:italic; }
+    .packet-delay { margin:.1rem auto; padding:.3rem .9rem; border-top:1px dashed rgba(183,132,179,.5); color:#ad9bb9; font-size:.75rem; font-family:monospace; letter-spacing:.12em; text-align:center; }
+    .ticket-insert { margin:1.1rem 0 .3rem; padding:1.2rem 1.4rem; border:1px solid #96597f; border-radius:12px; background:linear-gradient(135deg,#2b122c,#120b20); box-shadow:inset 0 0 35px rgba(210,66,139,.08); }
+    .ticket-insert .ticket-label { font: .78rem monospace; letter-spacing:.2em; color:#cba5c2; }
+    .ticket-insert .ticket-main { color:#f0c28c; font-weight:800; letter-spacing:.12em; }
+    .ticket-insert .ticket-row { display:grid; gap:.28rem; padding:.65rem 0; border-bottom:1px solid #553249; }
+    .ticket-insert h3 { color:#f3c48d; letter-spacing:.09em; }
+    .ticket-insert .ticket-dates { font-family:monospace; color:#dbc8d8; }
+    .media-placeholder { margin:1rem 0; padding:1.3rem; border:1px dashed #b36c9d; background:rgba(81,22,75,.2); }
+    .media-placeholder strong { display:block; color:#f0c28c; margin:.35rem 0; }
+    .chain-footer { margin: .5rem 0; }
+    @media(max-width:600px) { .conversation-chain {padding:.6rem 0 1rem} .packet {padding:1rem} .ticket-insert {padding:1rem} }
+  
+
+/* EGO custom relay signature: same layered glitch family as Slice and Kesh */
+.signature-ego { position:relative;display:inline-block;font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;font-size:clamp(3.6rem,10vw,7.5rem);font-weight:900;line-height:.85;letter-spacing:.04em;color:#ff73cc;text-shadow:2px 0 #36d8ff,-2px 0 #8c4dff,0 0 20px rgba(255,43,194,.55);transform:skew(-7deg);animation:sigFlicker 4.1s steps(1) infinite; }
+.signature-ego::before,.signature-ego::after {content:attr(data-text);position:absolute;inset:0;pointer-events:none;}
+.signature-ego::before {color:#36d8ff;clip-path:inset(12% 0 67% 0);transform:translateX(5px);animation:sigSlice 2.1s steps(2) infinite;opacity:.75;}
+.signature-ego::after {color:#8c4dff;clip-path:inset(66% 0 7% 0);transform:translateX(-6px);animation:sigSlice 3s steps(2) reverse infinite;opacity:.7;}
+.ticket-insert {max-width:100%;overflow-wrap:anywhere;}
+.ticket-insert p {overflow-wrap:anywhere;}
+.reply-card .media-placeholder {max-width:100%;}
+.reply-card .packet-delay {text-align:left;}
+@media (max-width:560px){.signature-ego {font-size:clamp(3.3rem,16vw,5rem);}}
+
+
+/* =========================================================
+   TX-005 — Supplemental character roleplay context link
+   ========================================================= */
+.roleplay-reference {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-color: rgba(54, 216, 255, .62);
+  background: linear-gradient(135deg, rgba(54, 216, 255, .08), rgba(140, 77, 255, .10));
+}
+
+.roleplay-reference h3 {
+  color: var(--green);
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+  letter-spacing: .06em;
+}
+
+.roleplay-reference p {
+  margin: 0 0 14px;
+}
+
+.roleplay-reference a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .08em;
+  overflow-wrap: anywhere;
+}
+
+.roleplay-reference a:hover,
+.roleplay-reference a:focus-visible {
+  color: var(--bg);
+  background: var(--cyan);
+}

@@ -1,351 +1,1426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#09020f" />
-  <title>SL1C3 Transmission Archive</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="archive-page">
-
-  <aside class="hawkbat-rail" id="hawkbatRail" aria-label="Hydian Logistics Wayguard Protocol advertisement">
-    <button class="hawkbat-rail-close" id="hawkbatRailClose" type="button" aria-label="Dismiss Hawk Bat advertisement">×</button>
-    <button class="hawkbat-ad" id="hawkbatAd" type="button" aria-haspopup="dialog" aria-controls="hawkbatModal">
-      <span class="hawkbat-image-slot hawkbat-image-slot-top">
-        <img class="hawkbat-logo" src="assets/wp_logo.png" alt="Hydian Logistics Wayguard Protocol logo">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#09020f" name="theme-color"/>
+  <title>
+   SL1C3 Transmission Archive
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body class="archive-page">
+  <aside aria-label="Hydian Logistics Wayguard Protocol advertisement" class="hawkbat-rail" id="hawkbatRail">
+   <button aria-label="Dismiss Hawk Bat advertisement" class="hawkbat-rail-close" id="hawkbatRailClose" type="button">
+    ×
+   </button>
+   <button aria-controls="hawkbatModal" aria-haspopup="dialog" class="hawkbat-ad" id="hawkbatAd" type="button">
+    <span class="hawkbat-image-slot hawkbat-image-slot-top">
+     <img alt="Hydian Logistics Wayguard Protocol logo" class="hawkbat-logo" src="assets/wp_logo.png"/>
+    </span>
+    <span class="hawkbat-ad-top">
+     REQUEST // HAWK BAT
+    </span>
+    <span class="hawkbat-ad-body">
+     <strong class="hawkbat-ad-name">
+      NEED A RIDE?
+     </strong>
+     <span class="hawkbat-ad-tagline">
+      but everyone thinks you're as good as dead?
+      <br/>
+      <br/>
+      Gah'ee "Hawk Bat" Nebra'Soter
+      <br/>
+      Elite Extraction &amp; Escort Pilot
+     </span>
+     <span class="hawkbat-ad-cta">
+      Wayguard Protocol by Hydian Logistics →
+     </span>
+     <span class="hawkbat-discount">
+      <span class="hawkbat-discount-label">
+       FIRST-TIME CLIENT OFFER
       </span>
-
-      <span class="hawkbat-ad-top">REQUEST // HAWK BAT</span>
-
-      <span class="hawkbat-ad-body">
-        <strong class="hawkbat-ad-name">NEED A RIDE?</strong>
-        <span class="hawkbat-ad-tagline">but everyone thinks you're as good as dead?<br><br>Gah'ee "Hawk Bat" Nebra'Soter<br>Elite Extraction & Escort Pilot </span>
-        <span class="hawkbat-ad-cta">Wayguard Protocol by Hydian Logistics →</span>
-        <span class="hawkbat-discount">
-          <span class="hawkbat-discount-label">FIRST-TIME CLIENT OFFER</span>
-          <strong>USE CODE &quot;HAWKBAT&quot;</strong>
-          <small>Offer applies to first-time clients only.</small>
-        </span>
-        <span class="hawkbat-ad-status">PRIVATE SECTOR // SPONSORED AD</span>
-      </span>
-
-      <span class="hawkbat-image-slot hawkbat-image-slot-bottom">
-        <img class="hawkbat-logo" src="assets/wp_logo.png" alt="Hydian Logistics Wayguard Protocol logo">
-      </span>
-    </button>
+      <strong>
+       USE CODE "HAWKBAT"
+      </strong>
+      <small>
+       Offer applies to first-time clients only.
+      </small>
+     </span>
+     <span class="hawkbat-ad-status">
+      PRIVATE SECTOR // SPONSORED AD
+     </span>
+    </span>
+    <span class="hawkbat-image-slot hawkbat-image-slot-bottom">
+     <img alt="Hydian Logistics Wayguard Protocol logo" class="hawkbat-logo" src="assets/wp_logo.png"/>
+    </span>
+   </button>
   </aside>
-
-  <div class="hawkbat-modal" id="hawkbatModal" role="dialog" aria-modal="true" aria-labelledby="hawkbatTitle" hidden>
-    <div class="hawkbat-modal-card">
-      <button class="hawkbat-close" id="hawkbatClose" type="button" aria-label="Close recovery transmission">×</button>
-      <h2 id="hawkbatTitle">Gah'ee Nebra'Soter</h2>
-      <p class="hawkbat-modal-sub">WAYGUARD PROTOCOL // PILOT EN ROUTE</p>
-      <p class="hawkbat-message">
-        Oh… no… You got yourself in trouble because you made poor choices in your life, and now you’re facing the consequences of your actions. Who could’ve seen that coming? I did. - Gah’ee NebraSoter, Wayguard Pilot-Rank 1 <br><br>Thank you for contacting Hydian Logistics - Wayguard Protocol. We provide the services others dare not take.
-        <br><br>
-<li>If you’re currently in need of immediate emergency assistance, <strong>press 1</strong></li>
-<li>For Rate inquiries, <strong>press 2</strong></li>
-<li>To schedule a future service, <strong>press 3</strong></li>
-<li>Returning Customers, input your <strong>membership number</strong> now</li>
-      </p>
-      <p class="hawkbat-signoff">ETA // SOON ENOUGH</p>
-    </div>
+  <div aria-labelledby="hawkbatTitle" aria-modal="true" class="hawkbat-modal" hidden="" id="hawkbatModal" role="dialog">
+   <div class="hawkbat-modal-card">
+    <button aria-label="Close recovery transmission" class="hawkbat-close" id="hawkbatClose" type="button">
+     ×
+    </button>
+    <h2 id="hawkbatTitle">
+     Gah'ee Nebra'Soter
+    </h2>
+    <p class="hawkbat-modal-sub">
+     WAYGUARD PROTOCOL // PILOT EN ROUTE
+    </p>
+    <p class="hawkbat-message">
+     Oh… no… You got yourself in trouble because you made poor choices in your life, and now you’re facing the consequences of your actions. Who could’ve seen that coming? I did. - Gah’ee NebraSoter, Wayguard Pilot-Rank 1
+     <br/>
+     <br/>
+     Thank you for contacting Hydian Logistics - Wayguard Protocol. We provide the services others dare not take.
+     <br/>
+     <br/>
+     <li>
+      If you’re currently in need of immediate emergency assistance,
+      <strong>
+       press 1
+      </strong>
+     </li>
+     <li>
+      For Rate inquiries,
+      <strong>
+       press 2
+      </strong>
+     </li>
+     <li>
+      To schedule a future service,
+      <strong>
+       press 3
+      </strong>
+     </li>
+     <li>
+      Returning Customers, input your
+      <strong>
+       membership number
+      </strong>
+      now
+     </li>
+    </p>
+    <p class="hawkbat-signoff">
+     ETA // SOON ENOUGH
+    </p>
+   </div>
   </div>
-
-  <div class="signal-noise" aria-hidden="true"></div>
-  <div class="scanlines" aria-hidden="true"></div>
-
+  <div aria-hidden="true" class="signal-noise">
+  </div>
+  <div aria-hidden="true" class="scanlines">
+  </div>
   <main class="transmission-shell">
-    <nav class="primary-nav hud-frame" aria-label="Main archive navigation">
-  <a class="nav-button active" href="index.html" aria-current="page">
-    <span class="nav-kicker">SL1C3 // SECURE RELAY</span>
-    <strong>TRANSMISSION ARCHIVE</strong>
-    <small>Encrypted Holo-Net packets</small>
-  </a>
-  <a class="nav-button" href="dossier.html">
-    <span class="nav-kicker">KOHR ATLAS // ARCHIVE</span>
-    <strong>CREW DOSSIER</strong>
-    <small>Personnel &amp; history files</small>
-  </a>
-  <a class="nav-button" href="jobs.html">
-    <span class="nav-kicker">MULTI-CHANNEL // LIVE FEEDS</span>
-    <strong>JOBS BOARD</strong>
-    <small>Contracts, leads &amp; intercepted operations</small>
-  </a>
-  <a class="nav-button" href="rules.html">
-    <span class="nav-kicker">SWRPG // FIELD MANUAL</span>
-    <strong>RULES QUICK REFERENCE</strong>
-    <small>Searchable table rules &amp; source sheets</small>
-  </a>
-</nav>
-
-    <header class="masthead archive-masthead hud-frame">
-      <div>
-        <p class="eyebrow">ENCRYPTED // PRIORITY // HOLO-NET RELAY</p>
-        <h1 class="glitch-title" data-text="TRANSMISSION ARCHIVE">TRANSMISSION ARCHIVE</h1>
-        <p class="subhead">SL1C3 // SECURE PACKET DIRECTORY</p>
-      </div>
-      <div class="signal-meter" aria-label="signal integrity 92 percent">
-        <span></span><span></span><span></span><span></span><span></span>
-        <small>92%</small>
-      </div>
-    </header>
-
-    <section class="archive-directory-heading hud-frame">
-      <div>
-        <span class="directory-code">AVAILABLE PACKETS</span>
-        <h2>Transmissions</h2>
-      </div>
-      <p>Select a folder to decrypt and open its contents.</p>
-    </section>
-
-    <section class="archive-folders" aria-label="Transmission folders">
-      <details class="archive-folder transmission-folder">
-        <summary>
-          <span class="folder-index">TX-001</span>
-          <span class="folder-copy">
-            <strong class="folder-title">Transmission to the Nothoiin Chimera</strong>
-            <small>KOHR ATLAS // DELIVERED // ENCRYPTED</small>
-          </span>
-          <span class="folder-action" aria-hidden="true"></span>
-        </summary>
-
-        <div class="folder-content transmission-content">
-          <header class="masthead hud-frame">
-            <div>
-              <p class="eyebrow">ENCRYPTED // PRIORITY // HOLO-NET RELAY</p>
-              <h1 class="glitch-title" data-text="KOHR ATLAS TRANSMISSION">KOHR ATLAS TRANSMISSION</h1>
-              <p class="subhead">Transmission to the Nothoiin Chimera</p>
-            </div>
-            <div class="signal-meter" aria-label="signal integrity 92 percent">
-              <span></span><span></span><span></span><span></span><span></span>
-              <small>92%</small>
-            </div>
-          </header>
-
-          <section class="routing hud-frame">
-            <div><span>TO:</span> <strong>CAPTAIN VISTO*</strong></div>
-            <div><span>CC:</span> KOHR ATLAS</div>
-            <div><span>CHANNEL:</span> NOTHOIIN CHIMERA</div>
-            <div><span>ENCRYPTION:</span> <em>VERIFIED</em></div>
-          </section>
-
-          <section class="grid hero-grid">
-            <article class="message-card hud-frame">
-              <div class="section-code">01 // GREETING</div>
-              <h2>Captain Visto,</h2>
-              <p>please forward this to the rest of KOHR Atlas at your earliest convenience. Looks like I’ll be seeing you again soon. I look forward to the Nothoiin Chimera’s ardent dedication to hospitality.</p>
-            </article>
-
-            <figure class="glitch-media lip-media" style="--glitch-image: url('assets/kisskiss.png');">
-              <img src="assets/kisskiss.png" alt="Magenta lip print appearing as a corrupted holographic attachment" />
-              <figcaption>ATTACHMENT // SIGNAL BREAKUP</figcaption>
-            </figure>
-          </section>
-
-          <section class="grid split-grid">
-            <figure class="glitch-media" style="--glitch-image: url('assets/k-9s.png');">
-              <img src="assets/k-9s.png" alt="Two K-9 series hunting droids, one purple and one pink" />
-              <figcaption>K-9 SERIES // SECURITY ESCORT</figcaption>
-            </figure>
-
-            <article class="message-card hud-frame">
-              <div class="section-code">02 // PROTECTION</div>
-              <p>I hope this message finds your group of roughians in good standing. You’ll all be delighted to know that I have procured <strong>two K-9 series hunting droids</strong> as protection and am not so easily a killable target anymore.</p>
-            </article>
-          </section>
-
-          <section class="message-card hud-frame replication">
-            <div class="section-code">03 // REPLICATION UPDATE</div>
-            <p>Wonderful news to report. We have already replicated 2 of the data spikes, and things seem to be going very smoothly with no issues. I am confident we can easily create enough for everyone in Kohr Atlas.</p>
-          </section>
-
-          <aside class="warning-banner" role="note">
-            <span class="warning-icon">!</span>
-            <p><strong>Ojoh, don't kill me.</strong> I didn't know the following until recently; Killbolt only just told me.</p>
-          </aside>
-
-          <section class="mission hud-frame">
-            <div class="section-code">04 // FINAL ASSIGNMENT</div>
-            <div class="mission-layout">
-              <div>
-                <p>I was directed to inform you all that once we have the data spikes fully replicated, I will be joining you once again for a final assignment.</p>
-                <p>The data spikes are unfortunately not just usable anywhere; it will require infiltrating a hidden <strong>ISB data vault stronghold</strong> in the fringes of <strong>Wild Space</strong>, <strong>II-0810 Satellite Station</strong>.</p>
-                <p>This is where all Holo-net monitoring and data farming is kept, and that is where you'll be able to wipe yourself from the net, making yourself a <strong>ghost in the galaxy.</strong></p>
-              </div>
-              <div class="station-graphic" aria-label="II-0810 Satellite Station tactical display">
-                <div class="orbit orbit-a"></div>
-                <div class="orbit orbit-b"></div>
-                <div class="orbit orbit-c"></div>
-                <div class="station-core"></div>
-                <span class="station-label">II-0810<br><small>SATELLITE STATION</small></span>
-              </div>
-            </div>
-          </section>
-
-          <section class="grid kesh-grid">
-            <article class="message-card hud-frame">
-              <div class="section-code">05 // CHISS ARCHIVE</div>
-              <p><strong>Kesh:</strong> Isn’t this adorable? Who knew Chiss royalty took such cute baby pictures?</p>
-              <p class="archive-note">SOURCE // CHISS DATABASE // CLASSIFIED</p>
-            </article>
-
-            <figure class="glitch-media" style="--glitch-image: url('assets/babykesh.png');">
-              <img src="assets/babykesh.png" alt="Baby Kesh in ornate Chiss royal garments from a classified archive" />
-              <figcaption>ARCHIVE FEED // DATA FRAGMENTED</figcaption>
-            </figure>
-          </section>
-
-          <section class="chess-command hud-frame">
-            <span class="prompt">TACTICAL INSERT:</span>
-            <strong>SAVRIP B4 TO A4</strong>
-          </section>
-
-          <footer class="signature-zone">
-            <div class="signature-glitch" data-text="SL1C3">SL1C3</div>
-            <div class="footer-meta">
-              <span>END TRANSMISSION</span>
-              <span>STATUS: DELIVERED // TO BE DICED ADVENTURES</span>
-              <span>https://www.youtube.com/@tobedicedadv</span>
-            </div>
-          </footer>
-
-          <section class="reply-thread" aria-label="Reply from Kesh">
-            <article class="reply-card hud-frame">
-              <div class="section-code">INCOMING // REPLY // KESH</div>
-
-              <div class="reply-sender">
-                <strong>KESH</strong>
-                <span>KOHR ATLAS COMMUNICATION</span>
-              </div>
-
-              <p><strong>REACTION:</strong> 👍 // 👎</p>
-              <p class="reply-message"><strong>MESSAGE:</strong> Where did you get that classified information picture??</p>
-              <p class="reply-message"><strong>MESSAGE:</strong> that is highly inaccurate... there is way more ivory usually</p>
-              <p class="reply-message"><strong>MESSAGE:</strong> the baby is cute though</p>
-
-              <p class="archive-note reply-end">END TRANSMISSION</p>
-            </article>
-          </section>
+   <nav aria-label="Main archive navigation" class="primary-nav hud-frame">
+    <a aria-current="page" class="nav-button active" href="index.html">
+     <span class="nav-kicker">
+      SL1C3 // SECURE RELAY
+     </span>
+     <strong>
+      TRANSMISSION ARCHIVE
+     </strong>
+     <small>
+      Encrypted Holo-Net packets
+     </small>
+    </a>
+    <a class="nav-button" href="dossier.html">
+     <span class="nav-kicker">
+      KOHR ATLAS // ARCHIVE
+     </span>
+     <strong>
+      CREW DOSSIER
+     </strong>
+     <small>
+      Personnel &amp; history files
+     </small>
+    </a>
+    <a class="nav-button" href="jobs.html">
+     <span class="nav-kicker">
+      MULTI-CHANNEL // LIVE FEEDS
+     </span>
+     <strong>
+      JOBS BOARD
+     </strong>
+     <small>
+      Contracts, leads &amp; intercepted operations
+     </small>
+    </a>
+    <a class="nav-button" href="rules.html">
+     <span class="nav-kicker">
+      SWRPG // FIELD MANUAL
+     </span>
+     <strong>
+      RULES QUICK REFERENCE
+     </strong>
+     <small>
+      Searchable table rules &amp; source sheets
+     </small>
+    </a>
+   </nav>
+   <header class="masthead archive-masthead hud-frame">
+    <div>
+     <p class="eyebrow">
+      ENCRYPTED // PRIORITY // HOLO-NET RELAY
+     </p>
+     <h1 class="glitch-title" data-text="TRANSMISSION ARCHIVE">
+      TRANSMISSION ARCHIVE
+     </h1>
+     <p class="subhead">
+      SL1C3 // SECURE PACKET DIRECTORY
+     </p>
+    </div>
+    <div aria-label="signal integrity 92 percent" class="signal-meter">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+     <small>
+      92%
+     </small>
+    </div>
+   </header>
+   <section class="archive-directory-heading hud-frame">
+    <div>
+     <span class="directory-code">
+      AVAILABLE PACKETS
+     </span>
+     <h2>
+      Transmissions
+     </h2>
+    </div>
+    <p>
+     Select a folder to decrypt and open its contents.
+    </p>
+   </section>
+   <section aria-label="Transmission folders" class="archive-folders">
+    <!-- TX-001 // Transmission to the Nothoiin Chimera -->
+    <details class="archive-folder transmission-folder">
+     <summary>
+      <span class="folder-index">
+       TX-001
+      </span>
+      <span class="folder-copy">
+       <strong class="folder-title">
+        Transmission to the Nothoiin Chimera
+       </strong>
+       <small>
+        KOHR ATLAS // DELIVERED // ENCRYPTED
+       </small>
+      </span>
+      <span aria-hidden="true" class="folder-action">
+      </span>
+     </summary>
+     <div class="folder-content transmission-content">
+      <header class="masthead hud-frame">
+       <div>
+        <p class="eyebrow">
+         ENCRYPTED // PRIORITY // HOLO-NET RELAY
+        </p>
+        <h1 class="glitch-title" data-text="KOHR ATLAS TRANSMISSION">
+         KOHR ATLAS TRANSMISSION
+        </h1>
+        <p class="subhead">
+         Transmission to the Nothoiin Chimera
+        </p>
+       </div>
+       <div aria-label="signal integrity 92 percent" class="signal-meter">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <small>
+         92%
+        </small>
+       </div>
+      </header>
+      <section class="routing hud-frame">
+       <div>
+        <span>
+         TO:
+        </span>
+        <strong>
+         CAPTAIN VISTO*
+        </strong>
+       </div>
+       <div>
+        <span>
+         CC:
+        </span>
+        KOHR ATLAS
+       </div>
+       <div>
+        <span>
+         CHANNEL:
+        </span>
+        NOTHOIIN CHIMERA
+       </div>
+       <div>
+        <span>
+         ENCRYPTION:
+        </span>
+        <em>
+         VERIFIED
+        </em>
+       </div>
+      </section>
+      <section class="grid hero-grid">
+       <article class="message-card hud-frame">
+        <div class="section-code">
+         01 // GREETING
         </div>
-      </details>
-
-      <details class="archive-folder transmission-folder">
-        <summary>
-          <span class="folder-index">TX-002</span>
-          <span class="folder-copy">
-            <strong class="folder-title">Transmission to #0%3-0^3</strong>
-            <small>SL1C3// DELIVERED // ENCRYPTED</small>
-          </span>
-          <span class="folder-action" aria-hidden="true"></span>
-        </summary>
-
-        <div class="folder-content transmission-content">
-          <header class="masthead hud-frame">
-            <div>
-              <p class="eyebrow">ENCRYPTED // PRIORITY // HOLO-NET RELAY</p>
-              <h1 class="glitch-title" data-text="SL1C3 TRANSMISSION">SL1C3 <br> TRANSMISSION</h1>
-              <p class="subhead">Transmission to #0%3-0^3</p>
-            </div>
-            <div class="signal-meter" aria-label="signal integrity 92 percent">
-              <span></span><span></span><span></span><span></span><span></span>
-              <small>92%</small>
-            </div>
-          </header>
-
-          <section class="routing hud-frame">
-            <div><span>TO:</span> <strong>SL1C3*</strong></div>
-            <div><span>CC:</span> #0%3-0^3</div>
-            <div><span>CHANNEL:</span> NOTHOIIN CHIMERA</div>
-            <div><span>ENCRYPTION:</span> <em>VERIFIED</em></div>
-          </section>
-
-          <section class="grid hero-grid">
-            <article class="message-card hud-frame">
-              <div class="section-code">01 //</div>
-              <h2>Hope you're surviving,</h2>
-              <p>Nearly lost a team member, Don't die on me.</p>
-            </article>
-
-            <figure class="glitch-media lip-media" style="--glitch-image: url('assets/kesh.png');">
-              <img src="assets/kesh.png" alt="Kesh" />
-              <figcaption>ATTACHMENT // SIGNAL BREAKUP</figcaption>
-            </figure>
-          </section>
-
-          <section class="chess-command hud-frame">
-            <span class="prompt">TACTICAL INSERT:</span>
-            <strong>ROOK TO G-9</strong>
-          </section>
-
-         <footer class="signature-zone">
-  <div class="signature-kesh" data-text="KESH">KESH</div>
-  <div class="footer-meta">
-              <span>END TRANSMISSION</span>
-              <span>STATUS: DELIVERED // TO BE DICED ADVENTURES</span>
-              <span>https://www.youtube.com/@tobedicedadv</span>
-            </div>
-          </footer>
-
-          <section class="reply-thread" aria-label="Reply from Kesh">
-            <article class="reply-card hud-frame">
-              <div class="section-code">INCOMING // REPLY // SL1C3</div>
-
-              <div class="reply-sender">
-                <strong>SL1C3</strong>
-                <span>#0%3-0^3 COMMUNICATION</span>
-              </div>
-
-              <p class="reply-message"><strong>MESSAGE:</strong> Who almost died?! I have no plans to run head first into immanent danger any time soon, promise.</p>
-              <p class="reply-message"><strong>MESSAGE: Something to cheer you up -</strong> Because I am absolutely brilliant we have managed to replicate enough data spikes for the entire crew and a few extra if needed. Currently working on reconnaissance for II-0810.</p>
-
-              <p class="archive-note reply-end">END TRANSMISSION</p>
-            </article>
-          </section>
+        <h2>
+         Captain Visto,
+        </h2>
+        <p>
+         please forward this to the rest of KOHR Atlas at your earliest convenience. Looks like I’ll be seeing you again soon. I look forward to the Nothoiin Chimera’s ardent dedication to hospitality.
+        </p>
+       </article>
+       <figure class="glitch-media lip-media" style="--glitch-image: url('assets/kisskiss.png');">
+        <img alt="Magenta lip print appearing as a corrupted holographic attachment" src="assets/kisskiss.png">
+         <figcaption>
+          ATTACHMENT // SIGNAL BREAKUP
+         </figcaption>
+        </img>
+       </figure>
+      </section>
+      <section class="grid split-grid">
+       <figure class="glitch-media" style="--glitch-image: url('assets/k-9s.png');">
+        <img alt="Two K-9 series hunting droids, one purple and one pink" src="assets/k-9s.png">
+         <figcaption>
+          K-9 SERIES // SECURITY ESCORT
+         </figcaption>
+        </img>
+       </figure>
+       <article class="message-card hud-frame">
+        <div class="section-code">
+         02 // PROTECTION
         </div>
-      </details>
-
-      <details class="archive-folder is-empty">
-        <summary>
-          <span class="folder-index">TX-003</span>
-          <span class="folder-copy">
-            <strong class="folder-title">Untitled Transmission</strong>
-            <small>EMPTY SLOT // READY FOR INPUT</small>
-          </span>
-          <span class="folder-action" aria-hidden="true"></span>
-        </summary>
-        <div class="folder-content blank-transmission-slot"><!-- Add transmission 03 content here. --></div>
-      </details>
-
-      <details class="archive-folder is-empty">
-        <summary>
-          <span class="folder-index">TX-004</span>
-          <span class="folder-copy">
-            <strong class="folder-title">Untitled Transmission</strong>
-            <small>EMPTY SLOT // READY FOR INPUT</small>
-          </span>
-          <span class="folder-action" aria-hidden="true"></span>
-        </summary>
-        <div class="folder-content blank-transmission-slot"><!-- Add transmission 04 content here. --></div>
-      </details>
-
-      <details class="archive-folder is-empty">
-        <summary>
-          <span class="folder-index">TX-005</span>
-          <span class="folder-copy">
-            <strong class="folder-title">Untitled Transmission</strong>
-            <small>EMPTY SLOT // READY FOR INPUT</small>
-          </span>
-          <span class="folder-action" aria-hidden="true"></span>
-        </summary>
-        <div class="folder-content blank-transmission-slot"><!-- Add transmission 05 content here. --></div>
-      </details>
-    </section>
+        <p>
+         I hope this message finds your group of roughians in good standing. You’ll all be delighted to know that I have procured
+         <strong>
+          two K-9 series hunting droids
+         </strong>
+         as protection and am not so easily a killable target anymore.
+        </p>
+       </article>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        03 // REPLICATION UPDATE
+       </div>
+       <p>
+        Wonderful news to report. We have already replicated 2 of the data spikes, and things seem to be going very smoothly with no issues. I am confident we can easily create enough for everyone in Kohr Atlas.
+       </p>
+      </section>
+      <aside class="warning-banner" role="note">
+       <span class="warning-icon">
+        !
+       </span>
+       <p>
+        <strong>
+         Ojoh, don't kill me.
+        </strong>
+        I didn't know the following until recently; Killbolt only just told me.
+       </p>
+      </aside>
+      <section class="mission hud-frame">
+       <div class="section-code">
+        04 // FINAL ASSIGNMENT
+       </div>
+       <div class="mission-layout">
+        <div>
+         <p>
+          I was directed to inform you all that once we have the data spikes fully replicated, I will be joining you once again for a final assignment.
+         </p>
+         <p>
+          The data spikes are unfortunately not just usable anywhere; it will require infiltrating a hidden
+          <strong>
+           ISB data vault stronghold
+          </strong>
+          in the fringes of
+          <strong>
+           Wild Space
+          </strong>
+          ,
+          <strong>
+           II-0810 Satellite Station
+          </strong>
+          .
+         </p>
+         <p>
+          This is where all Holo-net monitoring and data farming is kept, and that is where you'll be able to wipe yourself from the net, making yourself a
+          <strong>
+           ghost in the galaxy.
+          </strong>
+         </p>
+        </div>
+        <div aria-label="II-0810 Satellite Station tactical display" class="station-graphic">
+         <div class="orbit orbit-a">
+         </div>
+         <div class="orbit orbit-b">
+         </div>
+         <div class="orbit orbit-c">
+         </div>
+         <div class="station-core">
+         </div>
+         <span class="station-label">
+          II-0810
+          <br/>
+          <small>
+           SATELLITE STATION
+          </small>
+         </span>
+        </div>
+       </div>
+      </section>
+      <section class="grid kesh-grid">
+       <article class="message-card hud-frame">
+        <div class="section-code">
+         05 // CHISS ARCHIVE
+        </div>
+        <p>
+         <strong>
+          Kesh:
+         </strong>
+         Isn’t this adorable? Who knew Chiss royalty took such cute baby pictures?
+        </p>
+        <p class="archive-note">
+         SOURCE // CHISS DATABASE // CLASSIFIED
+        </p>
+       </article>
+       <figure class="glitch-media" style="--glitch-image: url('assets/babykesh.png');">
+        <img alt="Baby Kesh in ornate Chiss royal garments from a classified archive" src="assets/babykesh.png"/>
+        <figcaption>
+         ARCHIVE FEED // DATA FRAGMENTED
+        </figcaption>
+       </figure>
+      </section>
+      <section class="chess-command hud-frame">
+       <span class="prompt">
+        TACTICAL INSERT:
+       </span>
+       <strong>
+        SAVRIP B4 TO A4
+       </strong>
+      </section>
+      <footer class="signature-zone">
+       <div class="signature-glitch" data-text="SL1C3">
+        SL1C3
+       </div>
+       <div class="footer-meta">
+        <span>
+         END TRANSMISSION
+        </span>
+        <span>
+         STATUS: DELIVERED // TO BE DICED ADVENTURES
+        </span>
+        <span>
+         https://www.youtube.com/@tobedicedadv
+        </span>
+       </div>
+      </footer>
+      <section aria-label="Reply from Kesh" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // KESH
+        </div>
+        <div class="reply-sender">
+         <strong>
+          KESH
+         </strong>
+         <span>
+          KOHR ATLAS COMMUNICATION
+         </span>
+        </div>
+        <p>
+         <strong>
+          REACTION:
+         </strong>
+         👍 // 👎
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Where did you get that classified information picture??
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         that is highly inaccurate... there is way more ivory usually
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         the baby is cute though
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+     </div>
+    </details>
+    <!-- TX-002 // Transmission to #0%3-0^3 -->
+    <details class="archive-folder transmission-folder">
+     <summary>
+      <span class="folder-index">
+       TX-002
+      </span>
+      <span class="folder-copy">
+       <strong class="folder-title">
+        Transmission to #0%3-0^3
+       </strong>
+       <small>
+        SL1C3// DELIVERED // ENCRYPTED
+       </small>
+      </span>
+      <span aria-hidden="true" class="folder-action">
+      </span>
+     </summary>
+     <div class="folder-content transmission-content">
+      <header class="masthead hud-frame">
+       <div>
+        <p class="eyebrow">
+         ENCRYPTED // PRIORITY // HOLO-NET RELAY
+        </p>
+        <h1 class="glitch-title" data-text="SL1C3 TRANSMISSION">
+         SL1C3
+         <br/>
+         TRANSMISSION
+        </h1>
+        <p class="subhead">
+         Transmission to #0%3-0^3
+        </p>
+       </div>
+       <div aria-label="signal integrity 92 percent" class="signal-meter">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <small>
+         92%
+        </small>
+       </div>
+      </header>
+      <section class="routing hud-frame">
+       <div>
+        <span>
+         TO:
+        </span>
+        <strong>
+         SL1C3*
+        </strong>
+       </div>
+       <div>
+        <span>
+         CC:
+        </span>
+        #0%3-0^3
+       </div>
+       <div>
+        <span>
+         CHANNEL:
+        </span>
+        NOTHOIIN CHIMERA
+       </div>
+       <div>
+        <span>
+         ENCRYPTION:
+        </span>
+        <em>
+         VERIFIED
+        </em>
+       </div>
+      </section>
+      <section class="grid hero-grid">
+       <article class="message-card hud-frame">
+        <div class="section-code">
+         01 //
+        </div>
+        <h2>
+         Hope you're surviving,
+        </h2>
+        <p>
+         Nearly lost a team member, Don't die on me.
+        </p>
+       </article>
+       <figure class="glitch-media lip-media" style="--glitch-image: url('assets/kesh.png');">
+        <img alt="Kesh" src="assets/kesh.png"/>
+        <figcaption>
+         ATTACHMENT // SIGNAL BREAKUP
+        </figcaption>
+       </figure>
+      </section>
+      <section class="chess-command hud-frame">
+       <span class="prompt">
+        TACTICAL INSERT:
+       </span>
+       <strong>
+        ROOK TO G-9
+       </strong>
+      </section>
+      <footer class="signature-zone">
+       <div class="signature-kesh" data-text="KESH">
+        KESH
+       </div>
+       <div class="footer-meta">
+        <span>
+         END TRANSMISSION
+        </span>
+        <span>
+         STATUS: DELIVERED // TO BE DICED ADVENTURES
+        </span>
+        <span>
+         https://www.youtube.com/@tobedicedadv
+        </span>
+       </div>
+      </footer>
+      <section aria-label="Reply from Kesh" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          #0%3-0^3 COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Who almost died?! I have no plans to run head first into immanent danger any time soon, promise.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE: Something to cheer you up -
+         </strong>
+         Because I am absolutely brilliant we have managed to replicate enough data spikes for the entire crew and a few extra if needed. Currently working on reconnaissance for II-0810.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+     </div>
+    </details>
+    <!-- TX-003 // Transmission to #0%3-0^3 -->
+    <details class="archive-folder transmission-folder">
+     <summary>
+      <span class="folder-index">
+       TX-003
+      </span>
+      <span class="folder-copy">
+       <strong class="folder-title">
+        Transmission to #0%3-0^3
+       </strong>
+       <small>
+        SL1C3  // DELIVERED // ENCRYPTED
+       </small>
+      </span>
+      <span aria-hidden="true" class="folder-action">
+      </span>
+     </summary>
+     <div class="folder-content transmission-content">
+      <header class="masthead hud-frame">
+       <div>
+        <p class="eyebrow">
+         ENCRYPTED // PRIORITY // HOLO-NET RELAY
+        </p>
+        <h1 class="glitch-title" data-text="EGO TRANSMISSION">
+         EGO TRANSMISSION
+        </h1>
+        <p class="subhead">
+         Glittering Starlight // Tour Invitation
+        </p>
+       </div>
+       <div aria-label="signal integrity 92 percent" class="signal-meter">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <small>
+         92%
+        </small>
+       </div>
+      </header>
+      <section class="routing hud-frame">
+       <div>
+        <span>
+         TO:
+        </span>
+        <strong>
+         SL1C3
+        </strong>
+       </div>
+       <div>
+        <span>
+         CC:
+        </span>
+        KOHR ATLAS
+       </div>
+       <div>
+        <span>
+         CHANNEL:
+        </span>
+        PRIVATE HOLO-NET
+       </div>
+       <div>
+        <span>
+         ENCRYPTION:
+        </span>
+        <em>
+         VERIFIED
+        </em>
+       </div>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        01 // RAPID PACKETS
+       </div>
+       <p>
+        Sli
+       </p>
+       <p>
+        SLUCDE
+       </p>
+       <p>
+        COMEBTIO THE TOER
+       </p>
+       <p>
+        GLITRERNG STOELLIGHT
+       </p>
+       <p>
+        Ryloth CONTOUR
+       </p>
+       <p>
+        WalT
+       </p>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        02 // TICKET ATTACHMENT
+       </div>
+       <div aria-label="Glittering Starlight tour ticket" class="ticket-insert">
+        <div class="ticket-row">
+         <span class="ticket-label">
+          ADMISSION
+         </span>
+         <strong class="ticket-main">
+          500 CREDITS
+         </strong>
+        </div>
+        <div class="ticket-row">
+         <span class="ticket-label">
+          TICKET TYPE
+         </span>
+         <strong class="ticket-main">
+          GENERAL ADMISSION
+         </strong>
+        </div>
+        <h3>
+         GLITTERING STARLIGHT TOUR
+        </h3>
+        <p>
+         See Isadora perform
+         <em>
+          Solar Fracture
+         </em>
+         , the breakout song that launched her into the galactic spotlight.
+        </p>
+        <div class="ticket-label">
+         TOUR DATES
+        </div>
+        <p class="ticket-dates">
+         RYLOTH // MONTH 4 // DAY 37
+        </p>
+        <p class="ticket-dates">
+         TATOOINE // MONTH 4 // DAY 39
+        </p>
+       </div>
+      </section>
+      <footer class="signature-zone">
+       <div class="signature-ego" data-text="EGO">
+        EGO
+       </div>
+       <div class="footer-meta">
+        <span>
+         END TRANSMISSION
+        </span>
+        <span>
+         STATUS: DELIVERED // SECURE HOLO-NET
+        </span>
+       </div>
+      </footer>
+     </div>
+    </details>
+    <!-- TX-004 // Transmission to #0%3-0^3 -->
+    <details class="archive-folder transmission-folder">
+     <summary>
+      <span class="folder-index">
+       TX-004
+      </span>
+      <span class="folder-copy">
+       <strong class="folder-title">
+        Transmission to #0%3-0^3
+       </strong>
+       <small>
+        SL1C3 // DELIVERED // ENCRYPTED
+       </small>
+      </span>
+      <span aria-hidden="true" class="folder-action">
+      </span>
+     </summary>
+     <div class="folder-content transmission-content">
+      <header class="masthead hud-frame">
+       <div>
+        <p class="eyebrow">
+         ENCRYPTED // PRIORITY // HOLO-NET RELAY
+        </p>
+        <h1 class="glitch-title" data-text="KESH TRANSMISSION">
+         KESH TRANSMISSION
+        </h1>
+        <p class="subhead">
+         Unstable holo-net signal // Concert Plans
+        </p>
+       </div>
+       <div aria-label="signal integrity 92 percent" class="signal-meter">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <small>
+         92%
+        </small>
+       </div>
+      </header>
+      <section class="routing hud-frame">
+       <div>
+        <span>
+         TO:
+        </span>
+        <strong>
+         SL1C3
+        </strong>
+       </div>
+       <div>
+        <span>
+         CC:
+        </span>
+        KOHR ATLAS
+       </div>
+       <div>
+        <span>
+         CHANNEL:
+        </span>
+        PRIVATE HOLO-NET
+       </div>
+       <div>
+        <span>
+         ENCRYPTION:
+        </span>
+        <em>
+         VERIFIED
+        </em>
+       </div>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        01 // VOICE TRANSCRIPTION
+       </div>
+       <p>
+        Hello Sl-Tu'vunn, you are important, and hanbsduio... I'm seeing trails in fire right now and they're majestic, like your computer skills, stars are pretty tonight...
+       </p>
+       <p>
+        I broke a Vibrosword, hand isn't hurt, I hurt though
+       </p>
+       <p>
+        [streams of laughter]
+       </p>
+       <p>
+        I agreed to see a show, I don't know much about music, not a thing where I'm from, but hakjojhsdhsdk el'cere does it sound fascinating
+       </p>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        02 // CSILLAN LANGUAGE FRAGMENTS
+       </div>
+       <p class="packet-noise">
+        [untranslated Csillan-language fragments // incoherent]
+       </p>
+       <p class="packet-noise">
+        “Ch’ezh… khir’oh… zhe’la—”
+       </p>
+       <p class="packet-noise">
+        “Tch’iri vel… nza’kesh… ahahaha”
+       </p>
+       <p class="packet-noise">
+        [additional unintelligible voice-to-text; laughter detected]
+       </p>
+      </section>
+      <footer class="signature-zone">
+       <div class="signature-kesh" data-text="KESH">
+        KESH
+       </div>
+       <div class="footer-meta">
+        <span>
+         END TRANSMISSION
+        </span>
+        <span>
+         STATUS: DELIVERED // SECURE HOLO-NET
+        </span>
+       </div>
+      </footer>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Seems like you are having a well-deserved fun time; please find some water and a comfortable bed. Ego sent me the tickets; I can take a break from reconnaissance to come to the concert. I'll see you there!
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Should I try and hack in to upgrade our tickets to VIP?
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+     </div>
+    </details>
+    <!-- TX-005 // Transmission to the Nothoiin Chimera -->
+    <details class="archive-folder transmission-folder">
+     <summary>
+      <span class="folder-index">
+       TX-005
+      </span>
+      <span class="folder-copy">
+       <strong class="folder-title">
+        Transmission to the Nothoiin Chimera
+       </strong>
+       <small>
+        CHAV // DELIVERED // ENCRYPTED
+       </small>
+      </span>
+      <span aria-hidden="true" class="folder-action">
+      </span>
+     </summary>
+     <div class="folder-content transmission-content">
+      <header class="masthead hud-frame">
+       <div>
+        <p class="eyebrow">
+         ENCRYPTED // PRIORITY // HOLO-NET RELAY
+        </p>
+        <h1 class="glitch-title" data-text="SL1C3 TRANSMISSION">
+         SL1C3 TRANSMISSION
+        </h1>
+        <p class="subhead">
+         Private correspondence // Captain Visto
+        </p>
+       </div>
+       <div aria-label="signal integrity 92 percent" class="signal-meter">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <small>
+         92%
+        </small>
+       </div>
+      </header>
+      <section class="routing hud-frame">
+       <div>
+        <span>
+         TO:
+        </span>
+        <strong>
+         CAPTAIN VISTO
+        </strong>
+       </div>
+       <div>
+        <span>
+         CC:
+        </span>
+        PRIVATE
+       </div>
+       <div>
+        <span>
+         CHANNEL:
+        </span>
+        NOTHOIIN CHIMERA
+       </div>
+       <div>
+        <span>
+         ENCRYPTION:
+        </span>
+        <em>
+         VERIFIED
+        </em>
+       </div>
+      </section>
+      <section class="message-card hud-frame replication">
+       <div class="section-code">
+        01 // PRIVATE INVITATION
+       </div>
+       <p>
+        Greetings
+        <strong>
+         Captain
+        </strong>
+        ,
+       </p>
+       <p>
+        Ego and Kesh pinged me about the concert. I’ve gathered enough intel on the other project to take a little leave out of my schedule, so looks like I’ll be making the trip to Ryloth.
+       </p>
+       <p>
+        Excited to catching up with you and the rest of the crew. I was poking around the ticket options and spotted some private booths. Better seats and a little privacy. Figured I’d see if you were interested in splitting one.
+       </p>
+       <p>
+        —
+       </p>
+       <aside aria-label="Character roleplay context" class="roleplay-reference hud-frame">
+        <span class="section-code">
+         SUPPLEMENTAL ARCHIVE // ROLEPLAY CONTEXT
+        </span>
+        <h3>
+         SL1C3 + CAPTAIN VISTO // CONTEXT LOG
+        </h3>
+        <p>
+         Related character roleplay and context for this private correspondence.
+        </p>
+        <a href="https://docs.google.com/document/d/1Kl0d4kpsun1QlcrwW1YrQOXwGSkkIil1EBwc9yl0-2A/edit?tab=t.0" rel="noopener noreferrer" target="_blank">
+         OPEN ROLEPLAY TRANSCRIPT ↗
+        </a>
+       </aside>
+      </section>
+      <footer class="signature-zone">
+       <div class="signature-glitch" data-text="SL1C3">
+        SL1C3
+       </div>
+       <div class="footer-meta">
+        <span>
+         END TRANSMISSION
+        </span>
+        <span>
+         STATUS: DELIVERED // SECURE HOLO-NET
+        </span>
+       </div>
+      </footer>
+      <section aria-label="Reply from CHAV" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // CHAV
+        </div>
+        <div class="reply-sender">
+         <strong>
+          CHAV
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         My my, that sounds incredibly tempting. I've been wondering if you would be interested in another punching lesson. Unfortunately... I kind of got my hands full with about 25 new "employees" from our most recent job out here that has quite a bit of logistics involved with it, so... I paid for the crew to go while I sort things out here. I'm sorry.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Well that’s thoroughly disappointing, but I’m glad you can finally outfit the Chimera properly with a full crew. Where on earth did you find 25 hooligans to join your merry band of renegades? I’ll assume my part time Astrgoation position has been filled for now. I also have some upgrades you might be interested in, but I’ll save those details for next time I see you. Ehem also just for clarity are our ‘punching lessons’ exclusive?
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION // 00:30 AFTER PREVIOUS PACKET
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         I’m realizing that could be taken as if I wanted to bring someone else into our punching lessons and not if we are having punching lessons separately with other people.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION // 01:00 AFTER PREVIOUS PACKET
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         The punching lessons are sex right? This innuendo is frustrating.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from CHAV" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // CHAV
+        </div>
+        <div class="reply-sender">
+         <strong>
+          CHAV
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <div class="media-placeholder">
+         <span class="section-code">
+          ATTACHMENT // VIDEO FOOTAGE
+         </span>
+         <strong>
+          PIRATE BASE ASSAULT // SURVIVORS
+         </strong>
+         <p>
+          VIDEO FILE NOT YET ATTACHED // Insert footage here when available.
+         </p>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         the survivors.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         RE: PUNCHING LESSONS
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         .............do you want to exclusively have sex with each other?
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         RE VIDEO:
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Oh…that was…thorough.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         RE PUNCHING LESSONS:
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Me? I wasn’t insinuating I would prefer either answer! I didn’t want to make any kind of social faux pas.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Given your rather endearing delusions of grandeur and hubris of truly impressive proportions, I thought it best to inquire whether possessiveness was another charming Nothoiin trait.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         If YOU wanted to be exclusive then I would be happy to oblige. I’m perfectly fine either way.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from CHAV" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // CHAV
+        </div>
+        <div class="reply-sender">
+         <strong>
+          CHAV
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         I wouldn't say my traits and Nothoiin traits are exactly flying in formation. Otherwise I would've stayed back home and been oppressed by the empire.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Semantics.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Exclusivity with me would mean a lot of things. Namely traveling around the galaxy on a freighter, dodging the empire, Kesh's cooking, and whatever crazy plot Kohr Atlas is wrapped up in at the time that by all rights should get us killed. And that's not ideal for a lot of people. So, in any kind of relationship, I don't expect exclusivity.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         On your end... You have that boss I want to eject into the nearest star. And besides that, I don't really know what your five cycle plan might be at the moment.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         You make it sound like I’m offering a binding ceremony, but if traveling with the crew is a requirement for dating I’ll have to refrain for now. My current life plan does not account for more than a couple standard hours…it’s a work in progress. And I’ll be stationed with my current employer at least until the data spike situation is resolved, so professional working relationship it is I suppose.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         It would have been nice to see you regardless, I wanted to introduce you to my pilot friend who is giving me transport over. Maybe next time.
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from CHAV" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // CHAV
+        </div>
+        <div class="reply-sender">
+         <strong>
+          CHAV
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         I didn't mean for it to come off so intense, written communication is dead. I was just emphasizing that I'm on the move a lot. So, it wouldn't be like we were meeting up for dinner every night or anything (unless you were traveling with me). But, if you wanted something more casual and the distance/time isn't a problem, then that's fine for me.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         And for the record, exclusivity isn't part of any of what I just said. So... Go nuts?
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         You want me to meet your pilot friend? Are they also looking for punching lessons? I didn't know this talk of exclusivity was going to end with you inviting a third.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         😜
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+      <section aria-label="Reply from SL1C3" class="reply-thread">
+       <article class="reply-card hud-frame">
+        <div class="section-code">
+         INCOMING // REPLY // SL1C3
+        </div>
+        <div class="reply-sender">
+         <strong>
+          SL1C3
+         </strong>
+         <span>
+          SECURE HOLO-NET COMMUNICATION
+         </span>
+        </div>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         I’m not really the ‘dinner every night’ kind off girl anyways. Casual sounds…nice.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Also, not that kind of friend you scoundrel. Though who knows maybe you two would hit it off.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         I have some more work to finish up before I can take leave from here.
+        </p>
+        <p class="reply-message">
+         <strong>
+          MESSAGE:
+         </strong>
+         Safe Travels Captain. 💋
+        </p>
+        <p class="archive-note reply-end">
+         END TRANSMISSION
+        </p>
+       </article>
+      </section>
+     </div>
+    </details>
+   </section>
   </main>
-
   <script>
-    (() => {
+   (() => {
       const rail = document.getElementById("hawkbatRail");
       const ad = document.getElementById("hawkbatAd");
       const modal = document.getElementById("hawkbatModal");
@@ -379,6 +1454,6 @@
       });
     })();
   </script>
-
-</body>
+ </body>
 </html>
+
